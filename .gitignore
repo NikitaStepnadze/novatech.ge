@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large media files
+public/content/3d/smartphone_screen/Iphone pro 3.obj
+public/content/3d/smartphone_screen/Iphone pro 3.glb
+public/content/3d/smartphone_screen/Iphone pro 3.fbx
+public/content/abstract-blue-energy-tunnel-hyperspace-travel-loop-2026-01-28-03-08-43-utc.mp4
