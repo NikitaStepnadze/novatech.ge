@@ -1250,6 +1250,17 @@ body.lightmode .banner-layout-wrapper::before {
     text-align: start;
 }
 
+.section-banner .title-heading-banner,
+.section-banner .banner-video-content p,
+.section-banner .banner-content p{
+    color: #FFFFFF;
+}
+
+.section-banner .title-heading-banner{
+    background-image: none;
+    -webkit-text-fill-color: #FFFFFF;
+}
+
 .banner-reviewer{
     display: flex;
     flex-direction: row;
