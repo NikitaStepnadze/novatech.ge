@@ -1,6 +1,7 @@
 import React from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import CounterOnScroll from "../Hooks/CounterOnScroll";
+import LazyVideo from "../Hooks/LazyVideo";
 
 function ExpertiseSection(){
 
@@ -12,11 +13,14 @@ function ExpertiseSection(){
                         <div className="expertise-img-layout">
                             <div className="image-container expertise-img">
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
-                                    <img
-                                        src="/assets/images/dummy-img-600x400.jpg"
-                                        alt="ჩვენი გამოცდილება"
-                                        className="img-fluid"
-                                    />
+                                    <div className="expertise-media">
+                                        <LazyVideo
+                                            className="expertise-video"
+                                            src="/assets/novatech/video/expertise.mp4"
+                                            poster="/assets/novatech/video/expertise-poster.webp"
+                                            aria-label="ჩვენი გამოცდილება"
+                                        />
+                                    </div>
                                 </AnimateOnScroll>
                                 <div className="expertise-layout">
                                     <div className="d-flex flex-column">

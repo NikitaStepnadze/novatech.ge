@@ -42,6 +42,14 @@ function NewsletterSection() {
             <div className="hero-container">
                 <div className="newsletter-wrapper">
                     <div className="newsletter-layout">
+                        <img
+                            src="/assets/novatech/objects/hands-tablet.webp"
+                            alt=""
+                            aria-hidden="true"
+                            className="brand-object newsletter-object"
+                            loading="lazy"
+                            decoding="async"
+                        />
                         <div className="spacer"></div>
                         <div className="d-flex flex-column gspace-5 position-relative z-2">
                             <AnimateOnScroll animation="fadeInLeft" speed="normal">

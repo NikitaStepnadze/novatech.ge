@@ -11,10 +11,9 @@ function AboutSection(){
                         <div className="image-container about-img">
                             <AnimateOnScroll animation="fadeInUp" speed="normal">
                             <img
-                                src="/assets/images/dummy-img-600x400.jpg"
+                                src="/assets/novatech/img/about.webp"
                                 alt="ჩვენ შესახებ"
-                                className="img-fluid"
-                            />
+                                className="img-fluid"  loading="lazy" decoding="async" />
                             </AnimateOnScroll>
                         
                             <div className="about-layout">

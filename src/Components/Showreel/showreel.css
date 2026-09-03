@@ -1,0 +1,182 @@
+.section-showreel {
+    position: relative;
+    overflow: hidden;
+}
+
+.showreel-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.showreel-lead {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.showreel-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Envato 3D icons, used as flat transparent art so they never re-render or
+   react to scroll — they simply sit beside the frame. */
+.showreel-float {
+    position: absolute;
+    z-index: 3;
+    width: clamp(70px, 9vw, 140px);
+    height: auto;
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.55));
+    animation: showreel-drift 7s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.showreel-float-left {
+    left: -2%;
+    top: 8%;
+    transform: rotate(-8deg);
+}
+
+.showreel-float-right {
+    right: -2%;
+    bottom: 6%;
+    animation-delay: -3.5s;
+    transform: rotate(7deg);
+}
+
+@keyframes showreel-drift {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .showreel-float { animation: none; }
+}
+
+.showreel-frame {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 980px;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1px solid var(--accent-color-3);
+    background-color: transparent;
+    background-image: radial-gradient(at top left, var(--accent-color-3) 0%, var(--accent-color-4) 60%);
+    box-shadow: var(--box-shadow-bottom-right-wide);
+}
+
+.showreel-frame::before {
+    content: '';
+    position: absolute;
+    inset: -14%;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: radial-gradient(at center center, var(--accent-color) 0%, var(--accent-transparent) 65%);
+    opacity: 0.3;
+    filter: blur(50px);
+    pointer-events: none;
+}
+
+.showreel-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+.showreel-sound {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--accent-color-3);
+    border-radius: 50%;
+    background-color: var(--secondary);
+    color: var(--accent-color-2);
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.showreel-sound:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.06);
+}
+
+.showreel-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* AnimateOnScroll wraps each card, so the wrapper has to stretch too. */
+.showreel-highlights > * {
+    height: 100%;
+}
+
+.showreel-point {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100%;
+    padding: 30px;
+    border: 1px solid var(--accent-color-3);
+    border-radius: var(--global-border-radius);
+    background-color: transparent;
+    background-image: radial-gradient(at top left, var(--accent-color-3) 0%, var(--accent-color-4) 55%);
+    transition: box-shadow 0.3s ease;
+}
+
+.showreel-point:hover {
+    box-shadow: var(--box-shadow-bottom-right);
+}
+
+.showreel-point h5 {
+    color: var(--primary);
+}
+
+.showreel-point p {
+    margin: 0;
+}
+
+.showreel-point-icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    background-color: var(--secondary);
+    box-shadow: var(--box-shadow-top-left);
+}
+
+.showreel-point-icon img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .showreel-highlights { grid-template-columns: 1fr; }
+    .showreel-float-left { left: -4%; top: -4%; }
+    .showreel-float-right { right: -4%; bottom: -4%; }
+}
+
+@media (max-width: 576px) {
+    .showreel-frame { padding: 8px; border-radius: 20px; }
+    .showreel-video { border-radius: 14px; }
+    .showreel-sound { right: 18px; bottom: 18px; width: 44px; height: 44px; }
+    .showreel-float { display: none; }
+}

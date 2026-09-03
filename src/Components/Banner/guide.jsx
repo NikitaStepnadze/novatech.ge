@@ -1,14 +1,14 @@
 import React from "react";
 import VideoButton from "../Video/VideoButton";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
-import SplineBackground from "../Spline/SplineBackground";
+import GuideBackdrop from "../Guide/GuideBackdrop";
 
 function GuideBannerSection(){
     return(
         <>
             <div className="section-guide">
                 <div className="guide-banner">
-                    <SplineBackground />
+                    <GuideBackdrop />
                     <div className="hero-container">
                         <AnimateOnScroll animation="fadeInUp" speed="normal">
                             <div className="guide-content">

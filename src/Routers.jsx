@@ -13,7 +13,6 @@ import BlogPage from "./Page/Blog";
 import ContactPage from "./Page/Contact";
 import SingleServicePage from "./Page/SingleService";
 import SinglePostPage from "./Page/SinglePost";
-import Monitor3DTestPage from "./Page/Monitor3DTest";
 
 function AppRouter(){
     return (
@@ -31,7 +30,6 @@ function AppRouter(){
             <Route path="blog" element={<BlogPage />}/>
             <Route path="single_post" element={<SinglePostPage />}/>
             <Route path="contact" element={<ContactPage />}/>
-            <Route path="3d-mockup-test" element={<Monitor3DTestPage />}/>
             <Route path="404_page" element={<NotFoundPage />}/>
             <Route path="*" element={<NotFoundPage />}/>
         </Routes>

@@ -1,25 +1,32 @@
-// Screenshot aspect ratio should be close to 1.53:1 (e.g. 1800x1175, 1500x980)
-// to fill the monitor screen without cropping. Swap `image` for each project's
-// real landing page screenshot once available.
+// Real client sites, captured at 3800px wide and downscaled for the browser
+// mockups in the portfolio section (see Components/Works).
 export const worksData = [
     {
         id: 1,
-        title: "პროექტი 1",
-        image: "/assets/images/dummy-img-900x600.jpg",
+        title: "NOVATECH — ციფრული სააგენტო",
+        category: "ბიზნეს ვებსაიტი",
+        url: "novatech.ge",
+        image: "/assets/novatech/img/site-novatech.webp",
     },
     {
         id: 2,
-        title: "პროექტი 2",
-        image: "/assets/images/dummy-img-900x600.jpg",
+        title: "Gldani United Academy",
+        category: "სპორტული აკადემია",
+        url: "gldaniunitedacademy.ge",
+        image: "/assets/novatech/img/site-gldani.webp",
     },
     {
         id: 3,
-        title: "პროექტი 3",
-        image: "/assets/images/dummy-img-900x600.jpg",
+        title: "Burieti — კოტეჯები",
+        category: "ტურიზმი და დაჯავშნა",
+        url: "burieti.ge",
+        image: "/assets/novatech/img/site-burieti.webp",
     },
     {
         id: 4,
-        title: "პროექტი 4",
-        image: "/assets/images/dummy-img-900x600.jpg",
+        title: "Vinula — დასასვენებელი სახლები",
+        category: "ტურიზმი და დაჯავშნა",
+        url: "vinula.ge",
+        image: "/assets/novatech/img/site-vinula.webp",
     },
 ];

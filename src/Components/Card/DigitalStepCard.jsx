@@ -11,7 +11,7 @@ const DigitalStepCard = ({ icon, step, title, content, isFirst }) => {
                         <div className="digital-process-step">
                             <div className="d-flex justify-content-between">
                                 <div>
-                                    <img src={icon} alt="სამუშაო პროცესი" className="process-icon" />
+                                    <img src={icon} alt="სამუშაო პროცესი" className="process-icon"  loading="lazy" decoding="async" />
                                 </div>
                                 <span>{step}</span>
                             </div>

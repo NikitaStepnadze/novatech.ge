@@ -7,6 +7,13 @@ const NotFoundSection = () => {
         <div className="section-404">
             <div className="banner-layout-404">
                 <div className="layout-404">
+                    <img
+                        src="/assets/novatech/objects/bug-report.webp"
+                        alt=""
+                        aria-hidden="true"
+                        className="object-404"
+                        decoding="async"
+                    />
 
                     <AnimateOnScroll>
                         <span className="text-404 title-heading">

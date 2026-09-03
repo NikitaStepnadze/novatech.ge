@@ -13,6 +13,14 @@ const FaqSection = () => {
                             <span>ხშირად დასმული კითხვები</span>
                         </div>
                         <h2 className="title-heading">გაქვს კითხვები? ჩვენ გვაქვს პასუხები.</h2>
+                        <img
+                            src="/assets/novatech/objects/data-analytic.webp"
+                            alt=""
+                            aria-hidden="true"
+                            className="faq-object"
+                            loading="lazy"
+                            decoding="async"
+                        />
                     </div>
                 </div>
                 <div className="col col-lg-7">

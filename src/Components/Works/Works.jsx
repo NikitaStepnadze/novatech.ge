@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { worksData } from "../../Data/WorksData";
-import DeviceViewer from "../Monitor3D/DeviceViewer";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
-import "../Monitor3D/monitor3d.css";
 import "./works.css";
 
+// The screenshots are captured at desktop width, so the phone frame shows the
+// same shot scaled into a narrow viewport rather than a separate capture.
+const DEVICES = [
+    { key: "monitor", icon: "fa-desktop", label: "მონიტორის ხედი" },
+    { key: "phone", icon: "fa-mobile-screen-button", label: "მობილურის ხედი" },
+];
+
 function WorksSection() {
-    // Phone view is wired up (DeviceViewer + PhoneModel already support it)
-    // but disabled until a web-sized phone .glb replaces the current 83MB one.
     const [deviceType, setDeviceType] = useState("monitor");
-    const phoneReady = false;
 
     return (
         <div className="section">
@@ -29,35 +31,24 @@ function WorksSection() {
                                 role="group"
                                 aria-label="მოწყობილობის შეცვლა"
                             >
-                                <button
-                                    type="button"
-                                    className={deviceType === "monitor" ? "is-active" : ""}
-                                    onClick={() => setDeviceType("monitor")}
-                                    aria-pressed={deviceType === "monitor"}
-                                    title="მონიტორის ხედი"
-                                >
-                                    <i className="fa-solid fa-desktop"></i>
-                                </button>
-                                <button
-                                    type="button"
-                                    className={deviceType === "phone" ? "is-active" : ""}
-                                    onClick={() => phoneReady && setDeviceType("phone")}
-                                    aria-pressed={deviceType === "phone"}
-                                    disabled={!phoneReady}
-                                    title={
-                                        phoneReady
-                                            ? "მობილურის ხედი"
-                                            : "მობილურის ხედი მალე დაემატება"
-                                    }
-                                >
-                                    <i className="fa-solid fa-mobile-screen-button"></i>
-                                </button>
+                                {DEVICES.map((device) => (
+                                    <button
+                                        key={device.key}
+                                        type="button"
+                                        className={deviceType === device.key ? "is-active" : ""}
+                                        onClick={() => setDeviceType(device.key)}
+                                        aria-pressed={deviceType === device.key}
+                                        title={device.label}
+                                    >
+                                        <i className={`fa-solid ${device.icon}`}></i>
+                                    </button>
+                                ))}
                             </div>
                         </div>
                     </AnimateOnScroll>
                 </div>
 
-                <div className="works-grid">
+                <div className={`works-grid is-${deviceType}`}>
                     {worksData.map((item, index) => (
                         <AnimateOnScroll
                             key={item.id}
@@ -65,19 +56,32 @@ function WorksSection() {
                             speed="normal"
                             delay={index * 100}
                         >
-                            <div className="works-item">
-                                <DeviceViewer
-                                    deviceType={deviceType}
-                                    mediaUrl={item.image}
-                                    mediaType="image"
-                                    height={480}
-                                    background="transparent"
-                                    bezelColor="#15161a"
-                                    screenColor="#0a0f1c"
-                                    fitMargin={1.15}
-                                />
-                                <h6 className="works-item-title">{item.title}</h6>
-                            </div>
+                            <figure className="works-item">
+                                <div className={`device-frame device-${deviceType}`}>
+                                    <div className="device-screen">
+                                        <div className="device-bar">
+                                            <span className="device-dot"></span>
+                                            <span className="device-dot"></span>
+                                            <span className="device-dot"></span>
+                                            <span className="device-url">{item.url}</span>
+                                        </div>
+                                        <div className="device-shot">
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                loading="lazy"
+                                                decoding="async"
+                                            />
+                                        </div>
+                                    </div>
+                                    <span className="device-stand" aria-hidden="true"></span>
+                                    <span className="device-glow" aria-hidden="true"></span>
+                                </div>
+                                <figcaption className="works-item-meta">
+                                    <span className="works-item-category">{item.category}</span>
+                                    <h5 className="works-item-title">{item.title}</h5>
+                                </figcaption>
+                            </figure>
                         </AnimateOnScroll>
                     ))}
                 </div>

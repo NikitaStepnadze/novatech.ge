@@ -19,8 +19,7 @@ const BlogPostSection = () => {
                                     <img
                                         src={blog.image}
                                         alt={blog.title}
-                                        className="img-fluid"
-                                    />
+                                        className="img-fluid"  loading="lazy" decoding="async" />
                                     </div>
                                     <div className="d-grid">
                                         <div className="d-flex flex-row gspace-1 align-items-center">
@@ -51,10 +50,9 @@ const BlogPostSection = () => {
                     <div className="d-flex flex-column gspace-2">
                         <div className="post-image">
                             <img
-                            src="/assets/images/dummy-img-600x400.jpg"
+                            src="/assets/novatech/img/post-hero.webp"
                             alt="სტატია"
-                            className="img-fluid"
-                            />
+                            className="img-fluid"  loading="lazy" decoding="async" />
                         </div>
                         <h3>რატომ სჭირდება ბიზნესს ვებსაიტი?</h3>
                         <div className="underline-muted-full"></div>

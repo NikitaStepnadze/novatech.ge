@@ -9,10 +9,9 @@ const SingleServiceSection = () => {
                 <div className="d-flex flex-column gspace-5">
                     <div className="image-container">
                         <img
-                        src="/assets/images/dummy-img-600x400.jpg"
+                        src="/assets/novatech/img/service-hero.webp"
                         alt="სერვისი"
-                        className="single-service-img"
-                        />
+                        className="single-service-img"  loading="lazy" decoding="async" />
                         <div className="single-service-title-layout">
                             <div>
                                 <div className="single-service-spacer"></div>
@@ -50,19 +49,17 @@ const SingleServiceSection = () => {
                                     <div className="col">
                                         <div className="image-container">
                                         <img
-                                            src="/assets/images/dummy-img-600x400.jpg"
+                                            src="/assets/novatech/img/service-1.webp"
                                             alt="სერვისი"
-                                            className="img-fluid"
-                                        />
+                                            className="img-fluid"  loading="lazy" decoding="async" />
                                         </div>
                                     </div>
                                     <div className="col">
                                         <div className="image-container">
                                         <img
-                                            src="/assets/images/dummy-img-600x400.jpg"
+                                            src="/assets/novatech/img/service-2.webp"
                                             alt="სერვისი"
-                                            className="img-fluid"
-                                        />
+                                            className="img-fluid"  loading="lazy" decoding="async" />
                                         </div>
                                     </div>
                                 </div>

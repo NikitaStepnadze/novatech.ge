@@ -8,6 +8,7 @@ import ModalVideoSection from "../../Components/Video/video";
 import ServiceSection from "../../Components/Services/service";
 import CaseStudiesSection from "../../Components/CaseStudies/CaseStudies";
 import WorksSection from "../../Components/Works/Works";
+import ShowreelSection from "../../Components/Showreel/showreel";
 import TestimonialSection from "../../Components/Testimonial/testimonial";
 import DigitalProcessSection from "../../Components/DigitalProcess/digitalstep";
 import PricingPlanSection from "../../Components/Pricing/Pricing";
@@ -28,6 +29,7 @@ function HomePage(){
             <ServiceSection />
             <CaseStudiesSection noPadding={true} />
             <WorksSection />
+            <ShowreelSection />
             <TestimonialSection />
             <DigitalProcessSection />
             <PricingPlanSection />

@@ -5,7 +5,7 @@ export const testimonials = [
         title: "დამფუძნებელი",
         content: "NOVATECH-მა სრულიად შეცვალა ჩვენი ონლაინ იმიჯი. ახალი ვებსაიტი სწრაფია, ლამაზი და მომხმარებლები ბევრად მარტივად გვიკავშირდებიან.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-1.webp",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const testimonials = [
         title: "მარკეტინგის მენეჯერი",
         content: "ვმუშაობდით სხვა კომპანიებთანაც, მაგრამ NOVATECH გამოირჩევა. ყველაფერი ვადაში შესრულდა და შედეგი მოლოდინს გადააჭარბა.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-2.webp",
     },
     {
         id: 4,
@@ -21,7 +21,7 @@ export const testimonials = [
         title: "ბიზნესის მფლობელი",
         content: "დიზაინიდან SEO-მდე ყველაფერი მაღალ დონეზე გაკეთდა. საიტზე ვიზიტორების რაოდენობა მკვეთრად გაიზარდა.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-3.webp",
     },
     {
         id: 5,
@@ -29,7 +29,7 @@ export const testimonials = [
         title: "ოპერაციების დირექტორი",
         content: "ძალიან პროფესიონალური და შედეგზე ორიენტირებული გუნდი. ჩვენი ბრენდის ციფრული იმიჯი სრულიად ახალ დონეზე გადავიდა.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-4.webp",
     },
     {
         id: 6,
@@ -37,7 +37,7 @@ export const testimonials = [
         title: "ონლაინ მაღაზიის მფლობელი",
         content: "ონლაინ მაღაზია ზუსტად ისე გამოვიდა, როგორც წარმოვიდგენდი. შეკვეთების მიღება ბევრად გამარტივდა.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-5.webp",
     },
     {
         id: 7,
@@ -45,7 +45,7 @@ export const testimonials = [
         title: "კომპანიის დირექტორი",
         content: "სწრაფი კომუნიკაცია და გამართული შედეგი. ვებსაიტი ყველა მოწყობილობაზე იდეალურად მუშაობს.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-6.webp",
     },
     {
         id: 8,
@@ -53,7 +53,7 @@ export const testimonials = [
         title: "ბრენდ მენეჯერი",
         content: "დიზაინი ზუსტად ჩვენს ბრენდს მოერგო. მომხმარებლებისგან მხოლოდ დადებით შეფასებებს ვიღებთ.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-7.webp",
     },
     {
         id: 9,
@@ -61,6 +61,6 @@ export const testimonials = [
         title: "სტარტაპის დამფუძნებელი",
         content: "პროფესიონალური მიდგომა თავიდან ბოლომდე. ნამდვილად გირჩევთ, თუ ხარისხიანი ვებსაიტი გჭირდებათ.",
         rating: 5,
-        image: "/assets/images/dummy-img-400x400.jpg",
+        image: "/assets/novatech/img/avatar-8.webp",
     },
 ];

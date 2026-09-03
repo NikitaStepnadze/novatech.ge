@@ -1,7 +1,7 @@
 export const blogs = [
 	{
 		id: 1,
-		image: "/assets/images/dummy-img-600x400.jpg",
+		image: "/assets/novatech/img/blog-1.webp",
 		date: "14 აპრილი, 2025",
 		category: "ვებ დიზაინი",
 		title: "რატომ სჭირდება ბიზნესს ვებსაიტი?",
@@ -10,7 +10,7 @@ export const blogs = [
 	},
 	{
 		id: 2,
-		image: "/assets/images/dummy-img-600x400.jpg",
+		image: "/assets/novatech/img/blog-2.webp",
 		date: "14 აპრილი, 2025",
 		category: "SEO",
 		title: "როგორ განვავითაროთ ბიზნესი ონლაინ",

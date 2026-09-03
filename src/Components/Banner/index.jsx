@@ -10,7 +10,8 @@ function BannerHomeSection() {
                 <div className="banner-video-container keep-dark">
                     <video
                         id="banner-video-background"
-                        src="/content/novatech_hero.mov"
+                        src="/assets/novatech/video/hero.mp4"
+                        poster="/assets/novatech/video/hero-poster.webp"
                         autoPlay
                         muted
                         loop
@@ -56,9 +57,9 @@ function BannerHomeSection() {
                                             </a>
                                             <div className="banner-reviewer">
                                                 <div className="d-flex flex-row align-items-center">
-                                                    <img src="/assets/images/dummy-img-400x400.jpg" alt="შემფასებელი" className="avatar" />
-                                                    <img src="/assets/images/dummy-img-400x400.jpg" alt="შემფასებელი" className="avatar" />
-                                                    <img src="/assets/images/dummy-img-400x400.jpg" alt="შემფასებელი" className="avatar" />
+                                                    <img src="/assets/novatech/img/avatar-1.webp" alt="შემფასებელი" className="avatar" />
+                                                    <img src="/assets/novatech/img/avatar-2.webp" alt="შემფასებელი" className="avatar" />
+                                                    <img src="/assets/novatech/img/avatar-3.webp" alt="შემფასებელი" className="avatar" />
                                                 </div>
                                                 <div className="detail">
                                                     <span>2.7k დადებითი</span>

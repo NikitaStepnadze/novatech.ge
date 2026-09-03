@@ -1,7 +1,7 @@
 export const services = [
     {
         id: 1,
-        icon: "/assets/images/Icon-7.png",
+        icon: "/assets/novatech/icons/web-development.webp",
         title: "ბიზნეს ვებსაიტი",
         content: "თანამედროვე და სწრაფი ვებსაიტი, რომელიც შენს ბრენდს პროფესიონალურად წარმოაჩენს.",
         speed: "slow",
@@ -9,7 +9,7 @@ export const services = [
     },
     {
         id: 2,
-        icon: "/assets/images/digital-marketing-icons-F4LJ4W8.png",
+        icon: "/assets/novatech/icons/payment.webp",
         title: "ონლაინ მაღაზია",
         content: "გამართული ონლაინ მაღაზია, სადაც მომხმარებელი მარტივად შეუკვეთავს შენს პროდუქტს.",
         speed: "normal",
@@ -17,7 +17,7 @@ export const services = [
     },
     {
         id: 3,
-        icon: "/assets/images/Icon-8.png",
+        icon: "/assets/novatech/icons/ux.webp",
         title: "UI/UX დიზაინი",
         content: "დახვეწილი დიზაინი, რომელიც მომხმარებელს მარტივ და სასიამოვნო გამოცდილებას სთავაზობს.",
         speed: "fast",
@@ -25,7 +25,7 @@ export const services = [
     },
     {
         id: 4,
-        icon: "/assets/images/Icon-5.png",
+        icon: "/assets/novatech/icons/maintenance.webp",
         title: "ტექნიკური მხარდაჭერა",
         content: "შენი ვებსაიტი ყოველთვის გამართულია — ჩვენ ვზრუნავთ განახლებებსა და უსაფრთხოებაზე.",
         speed: "slow",
@@ -33,7 +33,7 @@ export const services = [
     },
     {
         id: 5,
-        icon: "/assets/images/Icon-6.png",
+        icon: "/assets/novatech/icons/ui.webp",
         title: "ბრენდინგი",
         content: "უნიკალური ვიზუალური სტილი, რომელიც შენს ბრენდს კონკურენტებისგან გამოარჩევს.",
         speed: "normal",
@@ -41,7 +41,7 @@ export const services = [
     },
     {
         id: 6,
-        icon: "/assets/images/Icon-4.png",
+        icon: "/assets/novatech/icons/seo.webp",
         title: "სისწრაფე და SEO",
         content: "SEO ოპტიმიზაცია და მაღალი სიჩქარე, რომ ახალმა მომხმარებელმა შენამდე მარტივად მოაღწიოს.",
         speed: "fast",

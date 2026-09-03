@@ -1,12 +1,12 @@
 .works-container {
-    max-width: 1600px;
+    max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
 }
 
 .works-header {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .works-device-switch {
@@ -35,7 +35,7 @@
     font-size: 16px;
 }
 
-.works-device-switch button:hover:not(:disabled) {
+.works-device-switch button:hover {
     opacity: 1;
 }
 
@@ -43,34 +43,241 @@
     background: var(--accent-color);
     color: #fff;
     opacity: 1;
-}
-
-.works-device-switch button:disabled {
-    cursor: not-allowed;
-    opacity: 0.25;
+    box-shadow: var(--box-shadow-bottom-right);
 }
 
 .works-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 70px 50px;
+    gap: 60px 50px;
 }
 
 .works-item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 26px;
+    margin: 0;
+}
+
+/* ---- Static device mockups -------------------------------------------- */
+/* Rendered entirely in CSS instead of WebGL: no runtime cost, no scroll-driven
+   camera movement, and the screenshots stay pixel-sharp at every breakpoint. */
+
+.device-frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.works-item:hover .device-frame {
+    transform: translateY(-8px);
+}
+
+.device-screen {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+    background: #0b0c11;
+    border: 1px solid var(--accent-color-3);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+        0 30px 60px -25px rgba(0, 0, 0, 0.9);
+}
+
+.device-monitor .device-screen {
+    border-radius: 16px;
+    padding: 10px 10px 12px 10px;
+}
+
+.device-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 6px 10px 6px;
+}
+
+.device-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent-color-3);
+    flex: 0 0 auto;
+}
+
+.device-dot:nth-child(3) {
+    background: var(--accent-color-6);
+}
+
+.device-url {
+    flex: 1;
+    margin-left: 10px;
+    padding: 3px 12px;
+    border-radius: 100px;
+    background: var(--accent-color-4);
+    border: 1px solid var(--accent-color-3);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--font-size-xs);
+    line-height: 1.6;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.device-shot {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 16 / 10;
+    background: var(--accent-color-4);
+}
+
+.device-shot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: object-position 3.5s ease-in-out;
+}
+
+/* Reveals the rest of the page on hover instead of animating the whole frame. */
+.works-item:hover .device-shot img {
+    object-position: bottom center;
+}
+
+.device-stand {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 120px;
+    height: 22px;
+    margin-top: -1px;
+    background: linear-gradient(180deg, var(--accent-color-3) 0%, var(--accent-color-4) 100%);
+    border: 1px solid var(--accent-color-3);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.device-stand::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 8px;
+    border-radius: 100px;
+    background: linear-gradient(180deg, var(--accent-color-3) 0%, var(--accent-color-4) 100%);
+    border: 1px solid var(--accent-color-3);
+}
+
+.device-glow {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 80%;
+    border-radius: 50%;
+    background: radial-gradient(at center center, var(--accent-color) 0%, var(--accent-transparent) 65%);
+    opacity: 0.28;
+    filter: blur(30px);
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.works-item:hover .device-glow {
+    opacity: 0.5;
+}
+
+/* Phone view reuses the same capture, framed as a handset. */
+.works-grid.is-phone {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 30px;
+}
+
+.device-phone {
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.device-phone .device-screen {
+    border-radius: 34px;
+    padding: 12px 10px;
+    border-width: 6px;
+    border-color: var(--accent-color-3);
+}
+
+.device-phone .device-bar {
+    justify-content: center;
+    padding: 0 0 10px 0;
+}
+
+.device-phone .device-dot {
+    display: none;
+}
+
+.device-phone .device-url {
+    margin-left: 0;
+    font-size: 10px;
+}
+
+.device-phone .device-shot {
+    aspect-ratio: 9 / 17;
+    border-radius: 22px;
+}
+
+.device-phone .device-shot img {
+    object-fit: cover;
+    object-position: top left;
+}
+
+.device-phone .device-stand {
+    display: none;
+}
+
+.works-item-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.works-item-category {
+    color: var(--accent-color-2);
+    opacity: 0.55;
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .works-item-title {
     margin: 0;
-    text-align: center;
-    opacity: 0.8;
+    color: var(--primary);
 }
 
-@media (max-width: 576px) {
-    .works-grid {
+@media (max-width: 1200px) {
+    .works-grid.is-phone {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .works-grid,
+    .works-grid.is-phone {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 50px;
+    }
+
+    .device-monitor .device-screen {
+        border-radius: 12px;
     }
 }

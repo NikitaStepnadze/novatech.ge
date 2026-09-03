@@ -23,8 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-# Large media files
-public/content/3d/smartphone_screen/Iphone pro 3.obj
-public/content/3d/smartphone_screen/Iphone pro 3.glb
-public/content/3d/smartphone_screen/Iphone pro 3.fbx
-public/content/abstract-blue-energy-tunnel-hyperspace-travel-loop-2026-01-28-03-08-43-utc.mp4
+# Large media source (kept locally, never deployed)
+media-source
+
+# Envato source packs (1.8GB of .blend/.glb/.psd) - only the generated
+# derivatives under public/assets/novatech are deployed
+envato

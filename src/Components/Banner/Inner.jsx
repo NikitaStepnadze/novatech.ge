@@ -7,7 +7,7 @@ const BannerInnerSection = () => {
                 <div className="banner-layout">
                     <div className="banner-inner-visual">
                         <img
-                            src="/content/novatech/novatech_banner.png"
+                            src="/assets/novatech/img/banner-inner.webp"
                             alt="NOVATECH"
                             className="banner-inner-img"
                         />

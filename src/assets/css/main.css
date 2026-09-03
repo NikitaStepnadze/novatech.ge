@@ -1202,53 +1202,43 @@ body.lightmode .banner-layout-wrapper::before {
     background-image: radial-gradient(at center center, var(--accent-color) 0%, var(--accent-transparent) 75%);
 }
 
-/* 14.1b Inner Banner Visual (novatech_banner.png)
-   The PNG is 2341x1239, but its solid "main rectangle" is only 2290x627 at
-   offset (25,5). The phone mockup deliberately spills ~607px past the
-   rectangle's bottom edge. The visual is therefore sized to the RECTANGLE
-   (aspect-ratio 2290/627) and the overflowing phone is pulled back out of
-   flow with a negative bottom margin, so it floats past the banner card and
-   over the section below for the 3D pop-out effect. */
-.banner-inner{
-    /* let the phone escape the card bottom while still clipping the sides */
-    overflow-x: clip;
-    overflow-y: visible;
+/* 14.1b Inner Banner Visual
+   The banner artwork is a single wide strip (4070x733). Earlier rules were
+   calibrated to a different, taller export whose phone mockup spilled past the
+   card, which left a tall empty gap under every inner page banner and cropped
+   the current artwork on both sides. The visual now simply matches the art. */
+.banner-inner {
+    overflow: hidden;
 }
 
-.banner-inner .banner-layout{
-    /* banner-only: no title/breadcrumb, so drop the stock 120px top padding
-       and gap and let the card hug the artwork */
+.banner-inner .banner-layout {
+    /* banner-only: no title/breadcrumb, so drop the stock 120px top padding */
     gap: 0px;
     padding: 0px;
 }
 
-/* Reserve room under the card for the phone to drop into, so it floats over
-   empty space rather than the next section. The phone overhangs the
-   rectangle by 26.503% of the artwork width. */
-.section-banner:has(.banner-inner){
-    padding-bottom: calc((100vw - 60px) * 0.26503);
-}
-
-.banner-inner-visual{
+.banner-inner-visual {
     position: relative;
     width: 100%;
-    /* box matches the rectangle only (2290x627 of the 2341x1239 PNG) */
-    aspect-ratio: 2290 / 627;
+    aspect-ratio: 4070 / 733;
 }
 
-.banner-inner-img{
+.banner-inner-img {
     display: block;
-    /* rectangle spans 2290 of the PNG's 2341px width -> scale to compensate */
-    width: 102.227%;
-    height: auto;
-    /* align the rectangle's edges (x=25, y=5) with the box */
-    margin-left: -1.092%;
-    margin-top: -0.218%;
-    /* lift the overflowing phone (607px of the PNG) out of flow */
-    margin-bottom: -26.503%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     position: relative;
     z-index: 2;
-    pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    /* The strip is too wide to stay legible on a phone, so it crops to a
+       squarer box centred on the artwork instead of shrinking to a sliver. */
+    .banner-inner-visual {
+        aspect-ratio: 16 / 9;
+    }
 }
 
 
@@ -1553,7 +1543,9 @@ body.lightmode .digital-process-banner{
 }  
 
 .process-icon{
-    width: 20%;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
 }
 
 .space-header{
@@ -2400,9 +2392,9 @@ body.lightmode .card-partner{
 }
 
 .service-icon img{
-    width: 60%;
-    height: 60%;
-    object-fit: cover;
+    width: 74%;
+    height: 74%;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -2572,7 +2564,7 @@ body.lightmode .card-case-studies{
     content: '';
     position: absolute;
     background-color: var(--accent-transparent);
-    background-image: linear-gradient(180deg, var(--accent-color-5) 0%, var(--secondary) 100%);
+    background-image: linear-gradient(180deg, rgba(4, 4, 4, 0.15) 0%, rgba(4, 4, 4, 0.35) 45%, rgba(4, 4, 4, 0.88) 82%, rgba(4, 4, 4, 0.97) 100%);
     width: 100%;
     height: 100%;
     top: 0;
@@ -2590,21 +2582,21 @@ body.lightmode .case-studies-content::before{
 }
 
 .case-studies-content.local-business{
-    background-image: url('/assets/images/dummy-img-600x400.jpg');
+    background-image: url('/assets/novatech/img/case-1.webp');
     width: 56.2%;
 }
 
 .case-studies-content.saas-leads{
-    background-image: url('/assets/images/dummy-img-600x400.jpg');
+    background-image: url('/assets/novatech/img/case-2.webp');
     width: 42%;
 }
 
 .case-studies-content.ecommerce{
-    background-image: url('/assets/images/dummy-img-600x400.jpg');
+    background-image: url('/assets/novatech/img/case-3.webp');
     width: 42%;
 }
 .case-studies-content.startup-branding{
-    background-image: url('/assets/images/dummy-img-600x400.jpg');
+    background-image: url('/assets/novatech/img/case-4.webp');
     width: 56.2%;
 }
 
@@ -3145,8 +3137,8 @@ body.lightmode .card-blog{
     flex-direction: column;
     overflow: hidden;
     border-radius: var(--global-border-radius);
-    padding: 320px 20px 220px 20px;
-    min-height: 780px;
+    padding: 220px 20px 140px 20px;
+    min-height: 620px;
     justify-content: flex-end;
     border: 1px solid var(--accent-color-3);
     position: relative;
@@ -3845,8 +3837,9 @@ body.lightmode .newsletter-layout{
 }
 
 .chooseus-icon img{
-    width: 60%;
-    object-fit: cover;
+    width: 72%;
+    height: 72%;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -4246,7 +4239,7 @@ body.lightmode .accordion-button:not(.collapsed)::after{
 /* ================== 53. CTA Service Banner Components ================== */
 
 .cta-service-banner{
-    background-image: url('/assets/images/dummy-img-1920x900.jpg');
+    background-image: url('/assets/novatech/img/cta-banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -4476,71 +4469,109 @@ body.lightmode .cta-service-banner::before{
     background-image: radial-gradient(at center center, var(--accent-color-6) 0%, var(--accent-transparent) 70%);
 }
 
-/* ================== Guide Spline Background ================== */
+/* ================== Guide Static Background ================== */
 
-.guide-spline {
+/* Replaces the old Spline/WebGL scene. Same depth, built from CSS layers plus
+   flat 3D artwork, so nothing re-renders or refits its camera while scrolling. */
+
+.guide-static {
     position: absolute;
     inset: 0;
     z-index: 1;
     overflow: hidden;
     border-radius: var(--global-border-radius);
-    pointer-events: auto;
+    pointer-events: none;
+    background-color: #05060C;
 }
 
-/* The runtime refits its camera whenever the canvas box changes size, and that
-   refit is what reads as the scene drifting while you scroll. Giving the canvas
-   a fixed pixel box it can never be resized out of keeps the framing locked;
-   the wrapper crops it to the card. */
-.guide-spline-canvas {
+.guide-aurora {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1920px !important;
-    height: 1080px !important;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 900ms ease;
+    inset: -20%;
+    background-image:
+        radial-gradient(38% 44% at 22% 26%, rgba(27, 68, 232, 0.85) 0%, rgba(27, 68, 232, 0) 62%),
+        radial-gradient(34% 40% at 78% 20%, rgba(90, 140, 255, 0.55) 0%, rgba(90, 140, 255, 0) 60%),
+        radial-gradient(46% 52% at 55% 78%, rgba(15, 32, 120, 0.9) 0%, rgba(15, 32, 120, 0) 65%),
+        radial-gradient(40% 45% at 84% 82%, rgba(27, 68, 232, 0.42) 0%, rgba(27, 68, 232, 0) 68%);
+    filter: blur(20px);
+    animation: guide-aurora-shift 18s ease-in-out infinite alternate;
 }
 
-.guide-spline-canvas.is-loaded {
-    opacity: 1;
+@keyframes guide-aurora-shift {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    100% { transform: translate3d(-3%, -2%, 0) scale(1.08); }
 }
 
-.guide-spline-canvas canvas {
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
-    pointer-events: auto;
+.guide-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    background-size: 74px 74px;
+    -webkit-mask-image: radial-gradient(70% 70% at 50% 35%, #000 0%, transparent 78%);
+    mask-image: radial-gradient(70% 70% at 50% 35%, #000 0%, transparent 78%);
 }
 
-@media screen and (min-width: 1921px) {
-    .guide-spline-canvas {
-        width: 100vw !important;
-    }
+.guide-object {
+    position: absolute;
+    height: auto;
+    filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.6));
+    animation: guide-object-drift 9s ease-in-out infinite;
+    will-change: transform;
 }
 
-/* Hide the Spline runtime watermark. */
-.guide-spline a[href*="spline.design"],
-.guide-spline #spline-watermark,
-.guide-spline [class*="watermark"] {
-    display: none !important;
+.guide-object-1 {
+    width: clamp(80px, 9vw, 150px);
+    top: 10%;
+    right: 10%;
 }
 
-/* Text sits above the scene; only the interactive bits catch the cursor so the
-   rest of the panel stays reactive. */
+.guide-object-2 {
+    width: clamp(60px, 6.5vw, 110px);
+    top: 38%;
+    right: 28%;
+    animation-delay: -3s;
+}
+
+.guide-object-3 {
+    width: clamp(56px, 6vw, 105px);
+    top: 14%;
+    left: 10%;
+    animation-delay: -6s;
+}
+
+.guide-object-4 {
+    width: clamp(70px, 8vw, 125px);
+    bottom: 12%;
+    right: 14%;
+    animation-delay: -1.5s;
+}
+
+@keyframes guide-object-drift {
+    0%, 100% { transform: translateY(0) rotate(-3deg); }
+    50%      { transform: translateY(-22px) rotate(3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .guide-aurora,
+    .guide-object { animation: none; }
+}
+
+@media (max-width: 767px) {
+    .guide-object-2,
+    .guide-object-3,
+    .guide-object-4 { display: none; }
+    .guide-object-1 { top: 8%; right: 6%; }
+}
+
+/* Copy sits above the backdrop. */
 .guide-banner .hero-container {
     position: relative;
     z-index: 3;
-    pointer-events: none;
 }
 
-.guide-banner .hero-container a,
-.guide-banner .hero-container button {
-    pointer-events: auto;
-}
-
-/* The panel stays dark in both themes so the scene reads, which means the copy
-   over it must stay light in light mode as well. */
+/* The panel stays dark in both themes so the artwork reads, which means the
+   copy over it must stay light in light mode as well. */
 body.lightmode .guide-banner .guide-content h3,
 body.lightmode .guide-banner .guide-content p,
 body.lightmode .guide-banner .guide-video-container p {
@@ -4701,4 +4732,121 @@ body.lightmode .guide-banner .guide-video-container p {
     .expertise-robot {
         display: none;
     }
+}
+
+/* ================== 60. Novatech Visual Refinements ================== */
+
+/* Blog cards previously took the natural height of whatever art was dropped in,
+   which made the two cards on the home page wildly different heights. */
+.blog-image {
+    aspect-ratio: 16 / 10;
+    height: auto;
+}
+
+.blog-image img {
+    object-position: center;
+}
+
+/* Struck-through pre-discount price next to the current package price. */
+.card-pricing .price-was {
+    margin: 0;
+    align-self: flex-end;
+    color: var(--text-color);
+    font-size: var(--font-size-xl);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    opacity: 0.75;
+}
+
+/* Reviewer chips are brand artwork rather than headshots, so they get a ring in
+   the accent colour instead of a photo-style border. */
+.testimonial-image img,
+.card-testimonial .testimonial-image img {
+    object-fit: cover;
+}
+
+/* Envato 3D art used as flat decoration never scales or re-renders on scroll. */
+.brand-object {
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+    filter: drop-shadow(0 20px 34px rgba(0, 0, 0, 0.55));
+}
+
+/* Flat 3D artwork placed as page furniture. Each one is a static transparent
+   PNG, so it costs a single image request and never reacts to scroll. */
+.newsletter-object {
+    right: 1.5%;
+    bottom: -9%;
+    width: clamp(130px, 17vw, 255px);
+    z-index: 1;
+    animation: brand-object-drift 8s ease-in-out infinite;
+}
+
+.faq-object {
+    display: block;
+    width: clamp(150px, 18vw, 260px);
+    height: auto;
+    margin-top: 40px;
+    filter: drop-shadow(0 22px 36px rgba(0, 0, 0, 0.5));
+    animation: brand-object-drift 9s ease-in-out infinite;
+}
+
+.object-404 {
+    display: block;
+    width: clamp(130px, 16vw, 220px);
+    height: auto;
+    margin: 0 auto 10px auto;
+    filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55));
+    animation: brand-object-drift 7s ease-in-out infinite;
+}
+
+@keyframes brand-object-drift {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-18px) rotate(2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .newsletter-object,
+    .faq-object,
+    .object-404 { animation: none; }
+}
+
+@media (max-width: 991px) {
+    .newsletter-object { display: none; }
+    .faq-object { margin-left: auto; margin-right: auto; }
+}
+
+/* The showreel video is white artwork, so in light mode the frame turns dark to
+   keep it reading as a screen rather than bleeding into the page. */
+body.lightmode .showreel-frame {
+    background-image: radial-gradient(at top left, #1F1F1F 0%, #0E0E0E 60%);
+    border-color: #1F1F1F;
+}
+
+body.lightmode .showreel-sound {
+    background-color: #0E0E0E;
+    border-color: #1F1F1F;
+    color: #FFFFFF;
+}
+
+/* The expertise slot holds a looping clip instead of a still. The source is
+   16:9 and the slot is portrait, so it crops to the centre where the light
+   burst sits. Matches the border radius the image used to get from
+   `.image-container img`. */
+.expertise-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+    background-color: var(--accent-color-4);
+    pointer-events: none;
+}
+
+/* Flex child that gives the clip the full slot box to cover. */
+.expertise-media {
+    width: 100%;
+    height: 100%;
 }
