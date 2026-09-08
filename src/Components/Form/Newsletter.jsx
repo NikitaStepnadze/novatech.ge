@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { trackEvent } from "../Analytics/pixel";
 
 function NewsletterSection() {
 
@@ -29,6 +30,8 @@ function NewsletterSection() {
             setSuccess(false);
             return;
         }
+
+        trackEvent("Subscribe", { content_name: "Newsletter" });
 
         setSuccess(true);
         setError(false);

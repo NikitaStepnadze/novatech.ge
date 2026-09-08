@@ -20,7 +20,7 @@ function ServiceSection(){
 
                             <AnimateOnScroll animation="fadeInDown" speed="normal">
                                 <h2 className="title-heading heading-container heading-container-medium">
-                                    ციფრული გადაწყვეტები, რომლებიც შედეგს მოაქვს
+                                    ციფრული გადაწყვეტილებები, რომელსაც შედეგები მოაქვს
                                 </h2>
                             </AnimateOnScroll>
                         </div>

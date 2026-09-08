@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { trackEvent } from "../Analytics/pixel";
 
 const ContactForm = () => {
   const [email, setEmail] = useState("");
@@ -19,6 +20,8 @@ const ContactForm = () => {
       setTimeout(() => setErrorMessageVisible(false), 3000);
       return;
     }
+
+    trackEvent("Lead", { content_name: "Contact Form" });
 
     setSuccessMessageVisible(true);
     setErrorMessageVisible(false);

@@ -5,10 +5,12 @@ import Footer from "./Components/Footer/footer";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import { ModalVideoProvider } from "./Components/Video/ModalVideoContext";
 import { NavProvider } from "./Components/Context/NavContext";
+import PixelPageView from "./Components/Analytics/PixelPageView";
 
 function App(){
     return (
         <Router>
+            <PixelPageView />
             <NavProvider>    
                 <ModalVideoProvider>
                     <Navbar />
