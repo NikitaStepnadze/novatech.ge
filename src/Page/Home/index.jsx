@@ -23,11 +23,10 @@ function HomePage(){
             <BannerHomeSection />
             <ExpertiseSection />
             <PartnershipSection />
-            <ChooseUsSection />
+            <ServiceSection />
             <GuideBannerSection />
             <ModalVideoSection />
-            <ServiceSection />
-            <CaseStudiesSection noPadding={true} />
+            <ChooseUsSection />
             <WorksSection />
             <ShowreelSection />
             <TestimonialSection />
@@ -35,6 +34,7 @@ function HomePage(){
             <PricingPlanSection />
             <NewsletterSection />
             <BlogSection />
+            <CaseStudiesSection noPadding={true} />
         </>
     );
 }

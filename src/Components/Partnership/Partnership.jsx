@@ -2,6 +2,7 @@ import React from "react";
 import { partnerships } from "../../Data/PartnershipData";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const PartnershipSection = () => {
@@ -36,13 +37,17 @@ const PartnershipSection = () => {
 
                             <div className="swiperPartner-container">
                                 <Swiper
+                                    modules={[Autoplay]}
                                     slidesPerView={6}
                                     spaceBetween={20}
                                     loop={true}
+                                    speed={5000}
                                     autoplay={{
-                                        delay: 5000,
+                                        delay: 1,
                                         disableOnInteraction: false,
+                                        pauseOnMouseEnter: true,
                                     }}
+                                    allowTouchMove={false}
                                     breakpoints={{
                                     230: { slidesPerView: 3 },
                                     767: { slidesPerView: 4 },
@@ -50,10 +55,10 @@ const PartnershipSection = () => {
                                     }}
                                     className="swiperPartner"
                                 >
-                                    {partnerships.concat(partnerships).map((partner) => (
-                                    <SwiperSlide key={partner.id + Math.random()}>
+                                    {partnerships.map((partner) => (
+                                    <SwiperSlide key={partner.id}>
                                         <div className="partner-slide">
-                                            <img src={partner.logo} alt="კლიენტი" className="partner-logo img-fluid" />
+                                            <img src={partner.logo} alt="პარტნიორის ლოგო" className="partner-logo img-fluid" />
                                         </div>
                                     </SwiperSlide>
                                     ))}

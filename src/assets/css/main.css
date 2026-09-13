@@ -2210,6 +2210,11 @@ body.lightmode .card-partner{
 
 .swiperPartner-container{
     margin: 0px -100px 0px -100px;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+.swiperPartner .swiper-wrapper{
+    transition-timing-function: linear !important;
 }
 .swiperPartner .swiper-slide{
     width: auto;
@@ -2224,6 +2229,24 @@ body.lightmode .card-partner{
     border-radius: 20px 20px 20px 20px;
     transition-duration: 0.6s;
     box-shadow: var(--box-shadow-bottom-right-wide)
+}
+
+.swiperPartner .partner-logo{
+    width: auto;
+    height: 36px;
+    max-width: 130px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+body.lightmode .swiperPartner .partner-logo{
+    filter: brightness(0);
+}
+
+.swiperPartner .partner-slide:hover .partner-logo{
+    opacity: 1;
 }
 
 .swiperPartner .partner-slide:hover{
@@ -2308,6 +2331,14 @@ body.lightmode .card-partner{
 .partnership-item{
     opacity: 0.6;
     transition: all 0.6s;
+}
+
+.partnership-item .partner-logo{
+    filter: brightness(0) invert(1);
+}
+
+body.lightmode .partnership-item .partner-logo{
+    filter: brightness(0);
 }
 
 .partnership-item:hover{
@@ -4495,32 +4526,18 @@ body.lightmode .cta-service-banner::before{
     background-color: #05060C;
 }
 
-.guide-aurora {
+.guide-bg-video {
     position: absolute;
-    inset: -20%;
-    background-image:
-        radial-gradient(38% 44% at 22% 26%, rgba(27, 68, 232, 0.85) 0%, rgba(27, 68, 232, 0) 62%),
-        radial-gradient(34% 40% at 78% 20%, rgba(90, 140, 255, 0.55) 0%, rgba(90, 140, 255, 0) 60%),
-        radial-gradient(46% 52% at 55% 78%, rgba(15, 32, 120, 0.9) 0%, rgba(15, 32, 120, 0) 65%),
-        radial-gradient(40% 45% at 84% 82%, rgba(27, 68, 232, 0.42) 0%, rgba(27, 68, 232, 0) 68%);
-    filter: blur(20px);
-    animation: guide-aurora-shift 18s ease-in-out infinite alternate;
-}
-
-@keyframes guide-aurora-shift {
-    0%   { transform: translate3d(0, 0, 0) scale(1); }
-    100% { transform: translate3d(-3%, -2%, 0) scale(1.08); }
-}
-
-.guide-grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-    background-size: 74px 74px;
-    -webkit-mask-image: radial-gradient(70% 70% at 50% 35%, #000 0%, transparent 78%);
-    mask-image: radial-gradient(70% 70% at 50% 35%, #000 0%, transparent 78%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .guide-object {
@@ -4564,7 +4581,7 @@ body.lightmode .cta-service-banner::before{
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .guide-aurora,
+    .guide-bg-video { display: none; }
     .guide-object { animation: none; }
 }
 
@@ -4581,12 +4598,19 @@ body.lightmode .cta-service-banner::before{
     z-index: 3;
 }
 
-/* The panel stays dark in both themes so the artwork reads, which means the
-   copy over it must stay light in light mode as well. */
-body.lightmode .guide-banner .guide-content h3,
-body.lightmode .guide-banner .guide-content p,
-body.lightmode .guide-banner .guide-video-container p {
+/* The panel stays dark in both themes so the copy over it stays white in
+   both themes too, rather than switching with the site-wide text color.
+   The heading also needs the gradient text-clip effect (.title-heading)
+   turned off, since that paints over a plain color. */
+.guide-banner .guide-content h3,
+.guide-banner .guide-content p,
+.guide-banner .guide-video-container p {
     color: #FFFFFF;
+}
+
+.guide-banner .guide-content h3.title-heading {
+    background-image: none;
+    -webkit-text-fill-color: #FFFFFF;
 }
 
 /* ================== 58. Brand Typography Assignment ================== */
