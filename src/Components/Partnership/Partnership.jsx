@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { partnerships } from "../../Data/PartnershipData";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";

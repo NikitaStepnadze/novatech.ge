@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { caseStudiesData } from "../../Data/CaseStudiesData";
 import CaseStudyCard from "../Card/CaseStudiesCard";

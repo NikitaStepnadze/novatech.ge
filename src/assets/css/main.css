@@ -65,12 +65,9 @@
 */
 
 /* ================== 01. Import Vendor ================== */
+/* Vendor stylesheets are loaded via <link> in app/layout.jsx; they are served
+   from /public and are not part of this bundle. */
 
-@import url('/assets/css/vendor/font-family-plus-jakarta-sans.css');
-@import url('/assets/css/vendor/fontawesome.css');
-@import url('/assets/css/vendor/brands.css');
-@import url('/assets/css/vendor/regular.css');
-@import url('/assets/css/vendor/solid.css');
 
 /* ================== Novatech Brand Fonts ================== */
 

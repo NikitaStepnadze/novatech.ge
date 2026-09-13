@@ -1,11 +1,17 @@
+"use client";
+
 import React, { createContext, useContext } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 const NavContext = createContext();
 
 export const NavProvider = ({ children }) => {
-    const location = useLocation();
-    const pathname = location.pathname;
+    const rawPathname = usePathname();
+
+    // trailingSlash makes usePathname report "/about/", but the dropdown checks
+    // below are written against "/about", so normalise before comparing.
+    const pathname =
+        rawPathname !== "/" ? rawPathname.replace(/\/$/, "") : rawPathname;
 
     const isDropdownActive = (paths = []) => paths.includes(pathname);
 

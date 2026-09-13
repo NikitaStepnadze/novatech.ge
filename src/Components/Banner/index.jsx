@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import VideoButton from "../Video/VideoButton";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";

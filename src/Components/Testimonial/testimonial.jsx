@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { testimonials } from "../../Data/TestimonialData";
 import TestimonialCard from "../Card/TestimonialCard";

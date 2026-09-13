@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { whychooseus } from "../../Data/ChooseUsData";
 import ChooseUsCard from "../Card/ChoooseUsCard";

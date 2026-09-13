@@ -1,3 +1,5 @@
+"use client";
+
 import React, { cloneElement } from 'react';
 import { useInView } from 'react-intersection-observer';
 import 'animate.css';

@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { NavLink } from "react-router-dom";
+import NavLink from "./NavLink";
 import ThemeSwitcher from "../Theme/themeswitch";
 import { useNav } from "../Context/NavContext";
 

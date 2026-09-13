@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";

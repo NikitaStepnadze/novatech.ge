@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { worksData } from "../../Data/WorksData";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
