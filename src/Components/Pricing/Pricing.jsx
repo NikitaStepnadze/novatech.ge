@@ -2,6 +2,12 @@
 
 import React from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import { getPackage, packagePath } from "../../Data/PackagesData";
+
+const plus = getPackage("plus");
+const pro = getPackage("pro");
+const ultra = getPackage("ultra");
+const allIn = getPackage("all-in");
 
 function PricingPlanSection(){
     return(
@@ -28,7 +34,7 @@ function PricingPlanSection(){
                                         <div className="content">
                                             <h3 className="title-heading">ერთად შევარჩიოთ შენთვის სწორი პაკეტი!</h3>
                                             <div className="link-wrapper">
-                                            <a href="./contact">უფასო კონსულტაცია</a>
+                                            <a href="/contact">უფასო კონსულტაცია</a>
                                             <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>
                                         </div>
@@ -37,13 +43,13 @@ function PricingPlanSection(){
 
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                     <div className="card card-pricing">
-                                        <h4>NOVATECH PLUS</h4>
-                                        <p>იდეალურია დამწყები და მცირე ბიზნესისთვის</p>
+                                        <h4>{plus.name}</h4>
+                                        <p>{plus.tagline}</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>150₾</h3>
-                                            <p className="price-was">300₾</p>
+                                            <h3>{plus.price}₾</h3>
+                                            <p className="price-was">{plus.oldPrice}₾</p>
                                         </div>
-                                        <a href="./contact" className="btn btn-accent">
+                                        <a href={packagePath(plus.slug)} className="btn btn-accent">
                                             <div className="btn-title">
                                                 <span>დეტალურად</span>
                                             </div>
@@ -52,12 +58,9 @@ function PricingPlanSection(){
                                             </div>
                                         </a>
                                         <ul className="check-list">
-                                            <li><a href="./single_services">თანამედროვე დიზაინი</a></li>
-                                            <li><a href="./single_services">ერთი გვერდი (პორტფოლიო)</a></li>
-                                            <li><a href="./single_services">დომენი + ჰოსტინგი</a></li>
-                                            <li><a href="./single_services">სოციალური ქსელების ინტეგრაცია</a></li>
-                                            <li><a href="./single_services">Google Maps ინტეგრაცია</a></li>
-                                            <li><a href="./single_services">ყველა მოწყობილობაზე მორგებული</a></li>
+                                            {plus.features.map((feature) => (
+                                                <li key={feature.title}><a href={packagePath(plus.slug)}>{feature.title}</a></li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </AnimateOnScroll>
@@ -67,13 +70,13 @@ function PricingPlanSection(){
                             <AnimateOnScroll animation="fadeInUp" speed="slow">
                                 <div className="card card-pricing pricing-highlight">
                                     <div className="spacer" />
-                                    <h4>NOVATECH ALL IN</h4>
-                                    <p>სრული ციფრული გადაწყვეტა მაქსიმალური შედეგისთვის</p>
+                                    <h4>{allIn.name}</h4>
+                                    <p>{allIn.tagline}</p>
                                     <div className="d-flex flex-row gspace-1 align-items-center">
-                                        <h3>750₾</h3>
-                                        <p className="price-was">1500₾</p>
+                                        <h3>{allIn.price}₾</h3>
+                                        <p className="price-was">{allIn.oldPrice}₾</p>
                                     </div>
-                                    <a href="./contact" className="btn btn-accent">
+                                    <a href={packagePath(allIn.slug)} className="btn btn-accent">
                                         <div className="btn-title">
                                             <span>დეტალურად</span>
                                         </div>
@@ -85,25 +88,20 @@ function PricingPlanSection(){
                                     <div className="core-benefits">
                                         <div className="benefit">
                                             <i className="fa-solid fa-crown"></i>
-                                            <a href="./contact">ყველაფერი რაც ULTRA პაკეტში</a>
+                                            <a href={packagePath(ultra.slug)}>ყველაფერი რაც {ultra.shortName} პაკეტში</a>
                                         </div>
-                                        <div className="benefit">
-                                            <i className="fa-solid fa-headset"></i>
-                                            <a href="./contact">ტექნიკური მხარდაჭერა</a>
-                                        </div>
-                                        <div className="benefit">
-                                            <i className="fa-solid fa-chart-line"></i>
-                                            <a href="./contact">GSC + Google Analytics</a>
-                                        </div>
+                                        {allIn.highlights.map((highlight) => (
+                                            <div className="benefit" key={highlight.title}>
+                                                <i className={`fa-solid ${highlight.icon}`}></i>
+                                                <a href={packagePath(allIn.slug)}>{highlight.title}</a>
+                                            </div>
+                                        ))}
                                     </div>
 
                                     <ul className="check-list">
-                                        <li><a href="./single_services">განვადების / გადახდის ინტეგრაცია</a></li>
-                                        <li><a href="./single_services">ბრენდინგი</a></li>
-                                        <li><a href="./single_services">10 სოც-მედია პოსტის დიზაინი</a></li>
-                                        <li><a href="./single_services">კომპლექსური ფუნქციონალი</a></li>
-                                        <li><a href="./single_services">Meta Pixel / Google Tag Manager</a></li>
-                                        <li><a href="./single_services">ტექნიკური მხარდაჭერა</a></li>
+                                        {allIn.features.map((feature) => (
+                                            <li key={feature.title}><a href={packagePath(allIn.slug)}>{feature.title}</a></li>
+                                        ))}
                                     </ul>
                                 </div>
                             </AnimateOnScroll>
@@ -113,20 +111,14 @@ function PricingPlanSection(){
                                 <AnimateOnScroll animation="fadeInRight" speed="normal">
                                     <div className="card pricing-highlight-box">
                                         <div className="d-flex flex-column gspace-2 w-100">
-                                            <h5>გინდა მეტი? აირჩიე NOVATECH ULTRA — 400₾</h5>
+                                            <h5>გინდა მეტი? აირჩიე {ultra.name} — {ultra.price}₾</h5>
                                             <div className="d-flex flex-column gspace-2">
-                                                <div className="pricing-highlights">
-                                                    <a href="./contact">პრემიუმ UI/UX დიზაინი + 3D</a>
-                                                    <i className="fa-solid fa-arrow-circle-right"></i>
-                                                </div>
-                                                <div className="pricing-highlights">
-                                                    <a href="./contact">ჯავშნის სისტემა</a>
-                                                    <i className="fa-solid fa-arrow-circle-right"></i>
-                                                </div>
-                                                <div className="pricing-highlights">
-                                                    <a href="./contact">E-commerce და ინდივიდუალური ფუნქციონალი</a>
-                                                    <i className="fa-solid fa-arrow-circle-right"></i>
-                                                </div>
+                                                {ultra.features.map((feature) => (
+                                                    <div className="pricing-highlights" key={feature.title}>
+                                                        <a href={packagePath(ultra.slug)}>{feature.title}</a>
+                                                        <i className="fa-solid fa-arrow-circle-right"></i>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="spacer" />
@@ -135,13 +127,13 @@ function PricingPlanSection(){
 
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                     <div className="card card-pricing">
-                                        <h4>NOVATECH PRO</h4>
-                                        <p>საუკეთესო არჩევანი მზარდი ბიზნესისთვის</p>
+                                        <h4>{pro.name}</h4>
+                                        <p>{pro.tagline}</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>250₾</h3>
-                                            <p className="price-was">500₾</p>
+                                            <h3>{pro.price}₾</h3>
+                                            <p className="price-was">{pro.oldPrice}₾</p>
                                         </div>
-                                        <a href="./contact" className="btn btn-accent">
+                                        <a href={packagePath(pro.slug)} className="btn btn-accent">
                                             <div className="btn-title">
                                                 <span>დეტალურად</span>
                                             </div>
@@ -150,12 +142,10 @@ function PricingPlanSection(){
                                             </div>
                                         </a>
                                         <ul className="check-list">
-                                            <li><a href="./single_services">ყველაფერი რაც PLUS პაკეტში</a></li>
-                                            <li><a href="./single_services">რამდენიმე გვერდი</a></li>
-                                            <li><a href="./single_services">SEO ოპტიმიზაცია</a></li>
-                                            <li><a href="./single_services">ელ. ფოსტის ფორმების ინტეგრაცია</a></li>
-                                            <li><a href="./single_services">Google Search Console</a></li>
-                                            <li><a href="./single_services">მრავალენოვანი</a></li>
+                                            <li><a href={packagePath(plus.slug)}>ყველაფერი რაც {plus.shortName} პაკეტში</a></li>
+                                            {pro.features.map((feature) => (
+                                                <li key={feature.title}><a href={packagePath(pro.slug)}>{feature.title}</a></li>
+                                            ))}
                                         </ul>
                                     </div>
                                 </AnimateOnScroll>

@@ -4,6 +4,7 @@ import React from "react";
 import NavLink from "./NavLink";
 import ThemeSwitcher from "../Theme/themeswitch";
 import { useNav } from "../Context/NavContext";
+import { packages, packagePath } from "../../Data/PackagesData";
 
 function Navbar() {
 const { isDropdownActive } = useNav();
@@ -80,9 +81,49 @@ return (
                             <a
                             className={`nav-link dropdown-toggle ${
                                 isDropdownActive([
+                                "/packages",
+                                ...packages.map((pkg) => `/packages/${pkg.slug}`),
+                                ])
+                                ? "active"
+                                : ""
+                            }`}
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            >
+                            პაკეტები <i className="fa-solid fa-angle-down accent-color"></i>
+                            </a>
+                            <ul className="dropdown-menu">
+                                <li>
+                                    <NavLink to="/packages" className="dropdown-item" end>
+                                        ყველა პაკეტი
+                                    </NavLink>
+                                </li>
+                                {packages.map((pkg) => (
+                                    <li key={pkg.slug}>
+                                        <NavLink to={packagePath(pkg.slug)} className="dropdown-item">
+                                            {pkg.name}
+                                        </NavLink>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+
+                        <li className="nav-item">
+                            <NavLink to="/projects" className="nav-link">
+                                პროექტები
+                            </NavLink>
+                        </li>
+
+                        <li className="nav-item dropdown">
+                            <a
+                            className={`nav-link dropdown-toggle ${
+                                isDropdownActive([
+                                "/why_us",
                                 "/case_studies",
                                 "/team",
-                                "/partnership",
+                                "/process",
                                 "/pricing",
                                 "/testimonial",
                                 "/faq",
@@ -100,6 +141,11 @@ return (
                             </a>
                             <ul className="dropdown-menu">
                             <li>
+                                <NavLink to="/why_us" className="dropdown-item">
+                                    რატომ ჩვენ
+                                </NavLink>
+                            </li>
+                            <li>
                                 <NavLink to="/case_studies" className="dropdown-item">
                                     პორტფოლიო
                                 </NavLink>
@@ -110,8 +156,8 @@ return (
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/partnership" className="dropdown-item">
-                                    პარტნიორები
+                                <NavLink to="/process" className="dropdown-item">
+                                    სამუშაო პროცესი
                                 </NavLink>
                             </li>
                             <li>

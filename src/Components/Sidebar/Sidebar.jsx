@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { packages, packagePath } from "../../Data/PackagesData";
 
 function Sidebar() {
     const overlayRef = useRef(null);
@@ -92,15 +93,31 @@ function Sidebar() {
                 </li>
                 <li className="sidebar-dropdown">
                     <div className="dropdown-header">
+                        <a href="#">პაკეტები</a>
+                    <button className="sidebar-dropdown-btn">
+                        <i className="fa-solid fa-angle-down"></i>
+                    </button>
+                    </div>
+                    <ul className="sidebar-dropdown-menu">
+                        <li><a href="/packages/">ყველა პაკეტი</a></li>
+                        {packages.map((pkg) => (
+                            <li key={pkg.slug}><a href={packagePath(pkg.slug)}>{pkg.name}</a></li>
+                        ))}
+                    </ul>
+                </li>
+                <li><a href="projects">პროექტები</a></li>
+                <li className="sidebar-dropdown">
+                    <div className="dropdown-header">
                         <a href="#">გვერდები</a>
                     <button className="sidebar-dropdown-btn">
                         <i className="fa-solid fa-angle-down"></i>
                     </button>
                     </div>
                     <ul className="sidebar-dropdown-menu">
+                        <li><a href="/why_us">რატომ ჩვენ</a></li>
                         <li><a href="case_studies">პორტფოლიო</a></li>
                         <li><a href="team">ჩვენი გუნდი</a></li>
-                        <li><a href="partnership">პარტნიორები</a></li>
+                        <li><a href="process">სამუშაო პროცესი</a></li>
                         <li><a href="pricing">ფასები</a></li>
                         <li><a href="testimonial">შეფასებები</a></li>
                         <li><a href="faq">კითხვები</a></li>

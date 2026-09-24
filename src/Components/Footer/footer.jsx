@@ -26,7 +26,10 @@ const Footer = () => {
                                     <ul className="footer-list">
                                         <li><a href="/">მთავარი</a></li>
                                         <li><a href="/about">ჩვენ შესახებ</a></li>
+                                        <li><a href="/why_us">რატომ ჩვენ</a></li>
                                         <li><a href="/service">სერვისები</a></li>
+                                        <li><a href="/packages/">პაკეტები</a></li>
+                                        <li><a href="/projects">პროექტები</a></li>
                                         <li><a href="/case_studies">პორტფოლიო</a></li>
                                         <li><a href="/blog">ბლოგი</a></li>
                                         <li><a href="/contact">კონტაქტი</a></li>

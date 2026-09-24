@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { worksData } from "../../Data/WorksData";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import DeviceMockup from "./DeviceMockup";
 import "./works.css";
 
 // The screenshots are captured at desktop width, so the phone frame shows the
@@ -59,26 +60,7 @@ function WorksSection() {
                             delay={index * 100}
                         >
                             <figure className="works-item">
-                                <div className={`device-frame device-${deviceType}`}>
-                                    <div className="device-screen">
-                                        <div className="device-bar">
-                                            <span className="device-dot"></span>
-                                            <span className="device-dot"></span>
-                                            <span className="device-dot"></span>
-                                            <span className="device-url">{item.url}</span>
-                                        </div>
-                                        <div className="device-shot">
-                                            <img
-                                                src={item.image}
-                                                alt={item.title}
-                                                loading="lazy"
-                                                decoding="async"
-                                            />
-                                        </div>
-                                    </div>
-                                    <span className="device-stand" aria-hidden="true"></span>
-                                    <span className="device-glow" aria-hidden="true"></span>
-                                </div>
+                                <DeviceMockup device={deviceType} item={item} />
                                 <figcaption className="works-item-meta">
                                     <span className="works-item-category">{item.category}</span>
                                     <h5 className="works-item-title">{item.title}</h5>

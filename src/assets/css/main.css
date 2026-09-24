@@ -4882,3 +4882,77 @@ body.lightmode .showreel-sound {
     width: 100%;
     height: 100%;
 }
+
+/* ================== 61. Packages Components ================== */
+
+/* Package comparison table. Scrolls sideways on narrow screens instead of
+   squeezing five columns into a phone width. */
+.package-compare-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--accent-color-3);
+    border-radius: var(--global-border-radius);
+    background-color: transparent;
+    background-image: radial-gradient(at bottom right, var(--accent-color-3) 0%, var(--accent-color-4) 50%);
+}
+
+.package-compare {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    color: var(--primary);
+    text-align: center;
+}
+
+.package-compare th,
+.package-compare td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--accent-color-3);
+    vertical-align: middle;
+}
+
+.package-compare tbody th,
+.package-compare thead th:first-child {
+    text-align: start;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+}
+
+.package-compare tfoot td {
+    border-bottom: none;
+}
+
+.package-compare thead a {
+    display: block;
+    color: var(--primary);
+    font-family: var(--heading-font);
+    font-size: var(--font-size-lg);
+    transition: all 0.2s;
+}
+
+.package-compare thead a:hover {
+    color: var(--accent-color);
+}
+
+.package-compare-price {
+    display: block;
+    margin-top: 6px;
+    color: var(--accent-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.package-compare .fa-circle-check {
+    color: var(--accent-color);
+    font-size: var(--font-size-xl);
+}
+
+.package-compare .fa-minus {
+    color: var(--text-color);
+    opacity: 0.5;
+}
+
+.package-compare .is-featured {
+    /* --accent-color-6 is ~50% opaque in dark mode, too heavy behind text. */
+    background-color: rgba(27, 68, 232, 0.08);
+}
