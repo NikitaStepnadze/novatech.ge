@@ -30,7 +30,7 @@ function ExpertiseSection(){
                                             <AnimateOnScroll animation="fadeInDown" speed="normal">
                                                 <div className="card card-expertise">
                                                     <h4>მზად ხარ ციფრული ნაბიჯისთვის?</h4>
-                                                    <p>შევქმნათ ვებსაიტი, რომელიც ზუსტად შენს ბიზნესს მოერგება.</p>
+                                                    <p>ვქმნით ვებსაიტს, რომელიც ზუსტად შენი ბიზნესის მოთხოვნებს მოერგება.</p>
                                                     <div className="d-flex align-items-center flex-row gspace-2 expertise-link">
                                                         <a href="./contact">უფასო კონსულტაცია</a>
                                                         <i className="fa-solid fa-circle-arrow-right"></i>
@@ -54,11 +54,11 @@ function ExpertiseSection(){
 
                             <AnimateOnScroll animation="fadeInRight" speed="normal">
                                 <h2 className="title-heading">
-                                    თანამედროვე ვებსაიტები, რეალური შედეგები
+                                    პროფესიონალური ვებსაიტი, ათასობით შესაძლებლობა
                                 </h2>
                             </AnimateOnScroll>
                             <p>
-                                NOVATECH-ში ვქმნით სწრაფ და გამართულ ვებსაიტებს, რომლებიც არა მხოლოდ ლამაზად გამოიყურება, არამედ ბიზნესის
+                                NOVATECH-ში ვქმნით თანამედროვე,სწრაფ და ბიზნესის განვითარებაზე ორიენტირებულ ვებსაიტებს, რომლებიც არა მხოლოდ ლამაზად გამოიყურება, არამედ ბიზნესის
                                 რეალურ მიზნებზეა მორგებული.
                             </p>
                             <div className="d-flex flex-column flex-md-row gspace-2">
@@ -69,7 +69,7 @@ function ExpertiseSection(){
                                         <li><a href="./single_services">ონლაინ მაღაზია</a></li>
                                         <li><a href="./single_services">UI/UX დიზაინი</a></li>
                                         <li><a href="./single_services">ტექნიკური მხარდაჭერა</a></li>
-                                        <li><a href="./single_services">ბრენდინგი</a></li>
+                                        <li><a href="./single_services">3D ელემნტები</a></li>
                                         <li><a href="./single_services">სისწრაფე და SEO</a></li>
                                     </ul>
                                 </div>
@@ -88,7 +88,7 @@ function ExpertiseSection(){
                                             <h6>წარმატებით დასრულებული ციფრული პროექტი</h6>
                                         </div>
                                         <p>
-                                            ყოველი პროექტი ჩვენთვის ახალი გამოწვევაა — ვქმნით ვებსაიტებს, რომლებიც ბიზნესს რეალურ შედეგს მოუტანს.
+                                            ყოველი პროექტი ჩვენთვის ახალი გამოწვევაა - ვქმნით ვებსაიტებს, რომლებიც ბიზნესს რეალურ შედეგს მოუტანს.
                                         </p>
                                     </div>
                                 </AnimateOnScroll>

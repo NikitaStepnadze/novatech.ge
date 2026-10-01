@@ -19,14 +19,14 @@ const PartnershipSection = () => {
                         <div className="row row-cols-lg-2 row-cols-1 align-items-center px-5 position-relative z-2">
                             <div className="col">
                                 <div className="d-flex flex-column justify-content-start pe-lg-3 pe-0">
-                                    <h3 className="title-heading">ვენდობით და გვენდობიან</h3>
+                                    <h3 className="title-heading">ტექნოლოგიები, რომლებსაც ვიყენებთ</h3>
                                 </div>
                             </div>
                             <div className="col">
                                 <div className="d-flex flex-column ps-lg-3 ps-0">
                                     <p>
-                                        ვამაყობთ ბიზნესებით, რომლებთანაც ვმუშაობთ. ყოველი პროექტი ჩვენთვის ახალი პარტნიორობაა
-                                        და ერთობლივი ციფრული განვითარების დასაწყისი.
+                                        ვმუშაობთ თანამედროვე და სანდო ინსტრუმენტებით, რომლებიც გვეხმარება შევქმნათ სწრაფი,
+                                        უსაფრთხო და მასშტაბირებადი ციფრული პროდუქტები.
                                     </p>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@ const PartnershipSection = () => {
                                     {partnerships.map((partner) => (
                                     <SwiperSlide key={partner.id}>
                                         <div className="partner-slide">
-                                            <img src={partner.logo} alt="პარტნიორის ლოგო" className="partner-logo img-fluid" />
+                                            <img src={partner.logo} alt="ტექნოლოგიის ლოგო" className="partner-logo img-fluid" />
                                         </div>
                                     </SwiperSlide>
                                     ))}

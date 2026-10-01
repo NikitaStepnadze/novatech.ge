@@ -24,14 +24,14 @@ function HomePage(){
             <ExpertiseSection />
             <PartnershipSection />
             <ServiceSection />
+            <PricingPlanSection />
             <GuideBannerSection />
             <ModalVideoSection />
-            <ChooseUsSection />
             <WorksSection />
             <ShowreelSection />
+            <ChooseUsSection />
             <TestimonialSection />
             <DigitalProcessSection />
-            <PricingPlanSection />
             <NewsletterSection />
             <BlogSection />
             <CaseStudiesSection noPadding={true} />

@@ -27,7 +27,7 @@ export const services = [
         id: 4,
         icon: "/assets/novatech/icons/maintenance.webp",
         title: "ტექნიკური მხარდაჭერა",
-        content: "შენი ვებსაიტი ყოველთვის გამართულია — ჩვენ ვზრუნავთ განახლებებსა და უსაფრთხოებაზე.",
+        content: "შენი ვებსაიტი ყოველთვის გამართულია - ჩვენ ვზრუნავთ განახლებებსა და უსაფრთხოებაზე.",
         speed: "slow",
         link: "single_services",
     },

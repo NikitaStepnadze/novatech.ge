@@ -46,7 +46,7 @@ function BannerHomeSection() {
                                         <p>
                                             NOVATECH-ში ვქმნით ვებსაიტებს, რომლებიც შენს ბრენდს უფრო
                                             პროფესიონალურად წარმოაჩენს და მომხმარებელს შენამდე მისვლას
-                                            გაუმარტივებს. შენი იდეა, ჩვენი ტექნოლოგია.
+                                            გაუმარტივებს.
                                         </p>
                                         <div className="d-flex flex-md-row flex-column justify-content-center justify-content-lg-start align-self-center align-self-lg-start gspace-3">
                                             <a href="./about" className="btn btn-accent">

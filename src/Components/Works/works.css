@@ -264,6 +264,25 @@
     color: var(--primary);
 }
 
+/* Only large desktop monitors (1440p and up) fit four mockups in one row at a
+   readable size; laptops, including 1920px ones, keep the 2x2 grid. The section
+   then spans nearly the full viewport so each monitor stays ~520px+ wide. */
+@media (min-width: 2400px) {
+    .section:has(> .works-container) {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .works-container {
+        max-width: none;
+    }
+
+    .works-grid.is-monitor {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 70px 50px;
+    }
+}
+
 @media (max-width: 1200px) {
     .works-grid.is-phone {
         grid-template-columns: repeat(2, 1fr);

@@ -19,6 +19,13 @@ Generated, web-optimised derivatives. Originals live in `media-source/`
                (showreel section), and `guide-bg.mp4` (guide card background,
                silent, downscaled to 960px/24fps since it just plays behind a
                card) transcoded from the source masters, plus WebP posters.
+               `portal.webm` (why-us section) comes from the ProRes 4444
+               `media-source/portal.mov`: centre-cropped to 1080x1080 (the
+               ring spans x≈422–1482), scaled to 900px, VP9 with alpha
+               (yuva420p, CRF 42). Safari drops VP9 alpha, so WebKit gets the
+               transparent `portal-poster.webp` still instead. A Safari HEVC
+               alpha version needs an x265 build with alpha support (or
+               macOS `avconvert`); the winget ffmpeg build lacks it.
 - `logos/`   – Partner/tool logos from `media-source/tools_logos`, trimmed and
                composited onto a flat white rounded card (320x160) so every
                mark stays legible on both the light and dark theme's partner
