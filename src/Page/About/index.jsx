@@ -1,5 +1,4 @@
 import React from "react";
-import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import AboutSection from "../../Components/About/about";
 import PartnershipSection from "../../Components/Partnership/Partnership";
@@ -13,7 +12,6 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 function AboutPage(){
     return(
         <>
-            <HeadTitle title="ჩვენ შესახებ - NOVATECH - ვებსაიტების დამზადება"/>
             <BannerInnerSection title="NOVATECH-ის შესახებ" currentPage="ჩვენ შესახებ" />
             <AboutSection />
             <PartnershipSection />

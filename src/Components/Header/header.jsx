@@ -18,7 +18,7 @@ return (
                     <img
                         src="/assets/images/marko-logo.png"
                         className="site-logo img-fluid"
-                        alt="ლოგო"
+                        alt="NOVATECH — მთავარი გვერდი"
                     />
                     </NavLink>
                 </div>
@@ -127,7 +127,6 @@ return (
                                 "/pricing",
                                 "/testimonial",
                                 "/faq",
-                                "/404_page",
                                 ])
                                 ? "active"
                                 : ""
@@ -173,11 +172,6 @@ return (
                             <li>
                                 <NavLink to="/faq" className="dropdown-item">
                                     კითხვები
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/404_page" className="dropdown-item">
-                                    შეცდომა 404
                                 </NavLink>
                             </li>
                             </ul>
@@ -227,7 +221,7 @@ return (
                         <div className="icon-circle">
                             <i className="fa-solid fa-phone-volume"></i>
                         </div>
-                        <h6>575 75 38 28</h6>
+                        <h6><a href="tel:+995575753828" className="text-reset">575 75 38 28</a></h6>
                     </div>
                 </div>
             </div>

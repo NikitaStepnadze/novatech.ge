@@ -8,7 +8,7 @@ import FaqSection from "../../Components/FAQs/faq";
 function PackagesPage(){
     return(
         <>
-            <BannerInnerSection title="პაკეტები" currentPage="პაკეტები" />
+            <BannerInnerSection title="ვებსაიტის პაკეტები" currentPage="პაკეტები" />
             <PricingPlanSection />
             <PackageCompareSection />
             <DigitalProcessSection />

@@ -71,7 +71,7 @@ const ProcessSection = () => {
                                     <h4>რას მიიღებ</h4>
                                     <div className="underline-accent-short"></div>
                                     <p>
-                                        პროექტის ბოლოს მიიღებ სრულად გამართულ, ონლაინ გაშვებულ ვებსაიტს. ზუსტი ჩამონათვალი დამოკიდებულია არჩეულ პაკეტზე — დეტალები იხილე <a href="/pricing">ფასების გვერდზე</a>.
+                                        პროექტის ბოლოს მიიღებ სრულად გამართულ, ონლაინ გაშვებულ ვებსაიტს. ზუსტი ჩამონათვალი დამოკიდებულია არჩეულ პაკეტზე — დეტალები იხილე <a href="/pricing/">ფასების გვერდზე</a>.
                                     </p>
                                     <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
                                         {processDeliverables.map((list, index) => (
@@ -132,7 +132,7 @@ const ProcessSection = () => {
                                         მოგვწერე ან დაგვირეკე — პირველი ნაბიჯი მხოლოდ ერთი ზარია.
                                     </p>
                                     <div className="link-wrapper">
-                                        <a href="/contact">დაგვიკავშირდი</a>
+                                        <a href="/contact/">დაგვიკავშირდი</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

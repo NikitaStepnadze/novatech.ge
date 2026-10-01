@@ -1,12 +1,19 @@
 import PackagesPage from "../../src/Page/Packages";
+import JsonLd from "../../src/Components/Seo/JsonLd";
+import { pageMetadata, breadcrumbSchema } from "../../src/seo/site";
 
-export const metadata = {
-    title: "პაკეტები - NOVATECH - ვებსაიტების დამზადება",
+export const metadata = pageMetadata({
+    path: "/packages/",
+    title: "ვებსაიტის პაკეტები და ფასები — PLUS, PRO, ULTRA, ALL IN",
     description:
         "NOVATECH-ის ვებსაიტის პაკეტები — PLUS, PRO, ULTRA და ALL IN. შეადარე ფასები და ფუნქციონალი და აირჩიე შენს ბიზნესზე მორგებული პაკეტი.",
-    alternates: { canonical: "https://novatech.ge/packages/" },
-};
+});
 
 export default function Page() {
-    return <PackagesPage />;
+    return (
+        <>
+            <JsonLd data={breadcrumbSchema([{ name: "პაკეტები", path: "/packages/" }])} />
+            <PackagesPage />
+        </>
+    );
 }

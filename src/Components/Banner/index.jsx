@@ -49,7 +49,7 @@ function BannerHomeSection() {
                                             გაუმარტივებს.
                                         </p>
                                         <div className="d-flex flex-md-row flex-column justify-content-center justify-content-lg-start align-self-center align-self-lg-start gspace-3">
-                                            <a href="./about" className="btn btn-accent">
+                                            <a href="/about/" className="btn btn-accent">
                                                 <div className="btn-title">
                                                     <span>დაიწყე ახლა</span>
                                                 </div>

@@ -158,7 +158,7 @@ const SingleServiceSection = () => {
                                         შენი იდეა. ჩვენი ტექნოლოგია. ერთად — ციფრული მომავალი. მოგვწერე და დაიწყე შენი ვებსაიტის შექმნა.
                                     </p>
                                     <div className="link-wrapper">
-                                        <a href="about">ვრცლად</a>
+                                        <a href="/about/">ვრცლად</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

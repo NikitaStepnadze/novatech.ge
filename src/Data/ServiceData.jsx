@@ -5,7 +5,7 @@ export const services = [
         title: "ბიზნეს ვებსაიტი",
         content: "თანამედროვე და სწრაფი ვებსაიტი, რომელიც შენს ბრენდს პროფესიონალურად წარმოაჩენს.",
         speed: "slow",
-        link: "single_services",
+        link: "/single_services/",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const services = [
         title: "ონლაინ მაღაზია",
         content: "გამართული ონლაინ მაღაზია, სადაც მომხმარებელი მარტივად შეუკვეთავს შენს პროდუქტს.",
         speed: "normal",
-        link: "single_services",
+        link: "/single_services/",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const services = [
         title: "UI/UX დიზაინი",
         content: "დახვეწილი დიზაინი, რომელიც მომხმარებელს მარტივ და სასიამოვნო გამოცდილებას სთავაზობს.",
         speed: "fast",
-        link: "single_services",
+        link: "/single_services/",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const services = [
         title: "ტექნიკური მხარდაჭერა",
         content: "შენი ვებსაიტი ყოველთვის გამართულია - ჩვენ ვზრუნავთ განახლებებსა და უსაფრთხოებაზე.",
         speed: "slow",
-        link: "single_services",
+        link: "/single_services/",
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ export const services = [
         title: "ბრენდინგი",
         content: "უნიკალური ვიზუალური სტილი, რომელიც შენს ბრენდს კონკურენტებისგან გამოარჩევს.",
         speed: "normal",
-        link: "single_services",
+        link: "/single_services/",
     },
     {
         id: 6,
@@ -45,6 +45,6 @@ export const services = [
         title: "სისწრაფე და SEO",
         content: "SEO ოპტიმიზაცია და მაღალი სიჩქარე, რომ ახალმა მომხმარებელმა შენამდე მარტივად მოაღწიოს.",
         speed: "fast",
-        link: "single_services",
+        link: "/single_services/",
     },
 ];

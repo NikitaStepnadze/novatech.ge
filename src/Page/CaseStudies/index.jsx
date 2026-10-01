@@ -1,5 +1,4 @@
 import React from "react";
-import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import CaseStudiesSection from "../../Components/CaseStudies/CaseStudies";
 import SocialFeedsSection from "../../Components/Portfolio/SocialFeeds";
@@ -10,8 +9,7 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 function CaseStudiesPage(){
     return(
         <>
-            <HeadTitle title="პორტფოლიო - NOVATECH - ვებსაიტების დამზადება" />
-            <BannerInnerSection title="ჩვენი პროექტები" currentPage="პორტფოლიო"/>
+            <BannerInnerSection title="პორტფოლიო — ჩვენი პროექტები" currentPage="პორტფოლიო"/>
             <CaseStudiesSection />
             <SocialFeedsSection />
             <GuideBannerSection />

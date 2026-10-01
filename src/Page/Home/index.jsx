@@ -1,5 +1,4 @@
 import React from "react";
-import HeadTitle from "../../Components/Head/HeadTitle";
 import BannerHomeSection from "../../Components/Banner";
 import ExpertiseSection from "../../Components/Expertise/expertise";
 import ChooseUsSection from "../../Components/ChooseUs/choose";
@@ -19,7 +18,6 @@ import BlogSection from "../../Components/Blog/blog";
 function HomePage(){
     return(
         <>
-            <HeadTitle title="მთავარი - NOVATECH - ვებსაიტების დამზადება" />
             <BannerHomeSection />
             <ExpertiseSection />
             <PartnershipSection />

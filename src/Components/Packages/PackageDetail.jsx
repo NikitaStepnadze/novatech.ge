@@ -136,7 +136,7 @@ const PackageDetailSection = ({ slug }) => {
                                         <h3>{pkg.price}₾</h3>
                                         {pkg.oldPrice && <p className="price-was">{pkg.oldPrice}₾</p>}
                                     </div>
-                                    <Link href="/contact" className="btn btn-accent">
+                                    <Link href="/contact/" className="btn btn-accent">
                                         <div className="btn-title">
                                             <span>შეუკვეთე</span>
                                         </div>
@@ -168,7 +168,7 @@ const PackageDetailSection = ({ slug }) => {
                                         მოგვწერე და ერთად შევარჩევთ პაკეტს, რომელიც ზუსტად შენს ბიზნესს და ბიუჯეტს მოერგება.
                                     </p>
                                     <div className="link-wrapper">
-                                        <Link href="/contact">უფასო კონსულტაცია</Link>
+                                        <Link href="/contact/">უფასო კონსულტაცია</Link>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

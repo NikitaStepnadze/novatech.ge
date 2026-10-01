@@ -44,7 +44,7 @@ function ServiceSection(){
                         <div className="service-link-footer">
                             <p>
                                 გჭირდება ინდივიდუალური პროექტი? მოგვწერე და ერთად შევქმნათ შენი ვებსაიტი.
-                                <a href="./contact"> მიიღე უფასო კონსულტაცია</a>
+                                <a href="/contact/"> მიიღე უფასო კონსულტაცია</a>
                             </p>
                         </div>
                     </div>

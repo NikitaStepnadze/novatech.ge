@@ -67,17 +67,17 @@ function AboutSection(){
                             <div className="d-flex flex-column flex-md-row gspace-1 gspace-md-5">
                                 <div className="about-list">
                                     <ul className="check-list">
-                                        <li><a href="./single_services">ბიზნეს ვებსაიტი</a></li>
-                                        <li><a href="./single_services">ონლაინ მაღაზია</a></li>
-                                        <li><a href="./single_services">UI/UX დიზაინი</a></li>
+                                        <li><a href="/single_services/">ბიზნეს ვებსაიტი</a></li>
+                                        <li><a href="/single_services/">ონლაინ მაღაზია</a></li>
+                                        <li><a href="/single_services/">UI/UX დიზაინი</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="about-list">
                                     <ul className="check-list">
-                                        <li><a href="./single_services">ტექნიკური მხარდაჭერა</a></li>
-                                        <li><a href="./single_services">ბრენდინგი</a></li>
-                                        <li><a href="./single_services">სისწრაფე და SEO</a></li>
+                                        <li><a href="/single_services/">ტექნიკური მხარდაჭერა</a></li>
+                                        <li><a href="/single_services/">ბრენდინგი</a></li>
+                                        <li><a href="/single_services/">სისწრაფე და SEO</a></li>
                                     </ul>
                                 </div>
                             </div>

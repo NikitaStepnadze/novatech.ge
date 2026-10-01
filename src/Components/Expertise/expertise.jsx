@@ -33,7 +33,7 @@ function ExpertiseSection(){
                                                     <h4>მზად ხარ ციფრული ნაბიჯისთვის?</h4>
                                                     <p>ვქმნით ვებსაიტს, რომელიც ზუსტად შენი ბიზნესის მოთხოვნებს მოერგება.</p>
                                                     <div className="d-flex align-items-center flex-row gspace-2 expertise-link">
-                                                        <a href="./contact">უფასო კონსულტაცია</a>
+                                                        <a href="/contact/">უფასო კონსულტაცია</a>
                                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                                     </div>
                                                 </div>
@@ -66,12 +66,12 @@ function ExpertiseSection(){
                                 <div className="expertise-list">
                                     <h5>რას ვაკეთებთ საუკეთესოდ</h5>
                                     <ul className="check-list">
-                                        <li><a href="./single_services">ბიზნეს ვებსაიტი</a></li>
-                                        <li><a href="./single_services">ონლაინ მაღაზია</a></li>
-                                        <li><a href="./single_services">UI/UX დიზაინი</a></li>
-                                        <li><a href="./single_services">ტექნიკური მხარდაჭერა</a></li>
-                                        <li><a href="./single_services">3D ელემნტები</a></li>
-                                        <li><a href="./single_services">სისწრაფე და SEO</a></li>
+                                        <li><a href="/single_services/">ბიზნეს ვებსაიტი</a></li>
+                                        <li><a href="/single_services/">ონლაინ მაღაზია</a></li>
+                                        <li><a href="/single_services/">UI/UX დიზაინი</a></li>
+                                        <li><a href="/single_services/">ტექნიკური მხარდაჭერა</a></li>
+                                        <li><a href="/single_services/">3D ელემნტები</a></li>
+                                        <li><a href="/single_services/">სისწრაფე და SEO</a></li>
                                     </ul>
                                 </div>
 

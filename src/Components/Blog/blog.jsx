@@ -32,7 +32,7 @@ function BlogSection() {
                                         განვითარების შესახებ — პრაქტიკული რჩევები შენი ბიზნესისთვის.
                                     </p>
                                     <div className="link-wrapper">
-                                        <a href="./blog">ყველა სტატია</a>
+                                        <a href="/blog/">ყველა სტატია</a>
                                         <i className="fa-solid fa-circle-arrow-right"></i>
                                     </div>
                                 </div>

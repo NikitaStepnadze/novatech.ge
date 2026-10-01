@@ -20,14 +20,30 @@ import { NavProvider } from "../src/Components/Context/NavContext";
 import PixelPageView from "../src/Components/Analytics/PixelPageView";
 import BootstrapClient from "../src/Components/Bootstrap/BootstrapClient";
 
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, OG_IMAGE } from "../src/seo/site";
+
 const PIXEL_ID = "1757431905546688";
 
+// No canonical here: a layout canonical is inherited by every page that doesn't
+// set its own, which pointed all of them at the homepage. Each page sets its
+// own through pageMetadata() in src/seo/site.js.
 export const metadata = {
-    metadataBase: new URL("https://novatech.ge"),
-    title: "NOVATECH - ვებსაიტების დამზადება",
+    metadataBase: new URL(SITE_URL),
+    title: {
+        default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+        template: `%s | ${SITE_NAME}`,
+    },
     description:
         "NOVATECH — ვქმნით ვებსაიტებს, რომლებიც შენს ბრენდს პროფესიონალურად წარმოაჩენს. ვებსაიტების დამზადება 150₾-დან.",
-    alternates: { canonical: "https://novatech.ge/" },
+    applicationName: SITE_NAME,
+    openGraph: {
+        type: "website",
+        locale: "ka_GE",
+        siteName: SITE_NAME,
+        images: [OG_IMAGE],
+    },
+    twitter: { card: "summary_large_image" },
+    formatDetection: { telephone: false },
     manifest: "/site.webmanifest",
     icons: {
         icon: [

@@ -1,7 +1,0 @@
-# Each route is now exported as its own static HTML file, so the old SPA
-# fallback (/* -> /index.html) would wrongly serve the homepage everywhere.
-# Netlify serves about/index.html for /about on its own; this only supplies the
-# 404 page for URLs that match no file.
-/partnership  /process/  301
-/partnership/  /process/  301
-/*  /404.html  404

@@ -1,5 +1,4 @@
 import React from "react";
-import HeadTitle from "../../Components/Head/HeadTitle";
 import FaqSection from "../../Components/FAQs/faq";
 import BannerInnerSection from "../../Components/Banner/Inner";
 import GuideBannerSection from "../../Components/Banner/guide";
@@ -9,8 +8,7 @@ import TestimonialSection from "../../Components/Testimonial/testimonial";
 function FaqPage(){
     return(
         <>  
-            <HeadTitle title="კითხვები - NOVATECH - ვებსაიტების დამზადება" />
-            <BannerInnerSection title="მარტივად და გასაგებად" currentPage="კითხვები" />
+            <BannerInnerSection title="ხშირად დასმული კითხვები ვებსაიტის დამზადებაზე" currentPage="კითხვები" />
             <FaqSection />
             <GuideBannerSection />
             <ModalVideoSection />

@@ -35,7 +35,7 @@ function PricingPlanSection(){
                                         <div className="content">
                                             <h3 className="title-heading">ერთად შევარჩიოთ შენთვის სწორი პაკეტი!</h3>
                                             <div className="link-wrapper">
-                                            <a href="/contact">უფასო კონსულტაცია</a>
+                                            <a href="/contact/">უფასო კონსულტაცია</a>
                                             <i className="fa-solid fa-arrow-circle-right"></i>
                                             </div>
                                         </div>

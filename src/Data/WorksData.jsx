@@ -5,7 +5,7 @@ export const worksData = [
         id: 1,
         title: "NOVATECH — ციფრული სააგენტო",
         category: "ბიზნეს ვებსაიტი",
-        url: "novatech.ge",
+        url: "nova-tech.ge",
         image: "/assets/novatech/img/site-novatech.webp",
     },
     {

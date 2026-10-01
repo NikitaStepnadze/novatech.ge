@@ -72,13 +72,13 @@ function Sidebar() {
         <div ref={sidebarRef} className="sidebar">
             <div className="sidebar-header">
                 <div className="logo">
-                    <img src="/assets/images/marko-logo.png" className="site-logo img-fluid logo" alt="ლოგო" />
+                    <img src="/assets/images/marko-logo.png" className="site-logo img-fluid logo" alt="NOVATECH ლოგო" />
                 </div>
                 <button className="close-btn"><span>X</span></button>
             </div>
             <ul className="menu">
                 <li><a href="/">მთავარი</a></li>
-                <li><a href="about">ჩვენ შესახებ</a></li>
+                <li><a href="/about/">ჩვენ შესახებ</a></li>
                 <li className="sidebar-dropdown">
                     <div className="dropdown-header">
                         <a href="#">სერვისები</a>
@@ -87,8 +87,8 @@ function Sidebar() {
                     </button>
                     </div>
                     <ul className="sidebar-dropdown-menu">
-                        <li><a href="service">სერვისები</a></li>
-                        <li><a href="single_services">სერვისის დეტალები</a></li>
+                        <li><a href="/service/">სერვისები</a></li>
+                        <li><a href="/single_services/">სერვისის დეტალები</a></li>
                     </ul>
                 </li>
                 <li className="sidebar-dropdown">
@@ -105,7 +105,7 @@ function Sidebar() {
                         ))}
                     </ul>
                 </li>
-                <li><a href="projects">პროექტები</a></li>
+                <li><a href="/projects/">პროექტები</a></li>
                 <li className="sidebar-dropdown">
                     <div className="dropdown-header">
                         <a href="#">გვერდები</a>
@@ -114,14 +114,13 @@ function Sidebar() {
                     </button>
                     </div>
                     <ul className="sidebar-dropdown-menu">
-                        <li><a href="/why_us">რატომ ჩვენ</a></li>
-                        <li><a href="case_studies">პორტფოლიო</a></li>
-                        <li><a href="team">ჩვენი გუნდი</a></li>
-                        <li><a href="process">სამუშაო პროცესი</a></li>
-                        <li><a href="pricing">ფასები</a></li>
-                        <li><a href="testimonial">შეფასებები</a></li>
-                        <li><a href="faq">კითხვები</a></li>
-                        <li><a href="404_page">შეცდომა 404</a></li>
+                        <li><a href="/why_us/">რატომ ჩვენ</a></li>
+                        <li><a href="/case_studies/">პორტფოლიო</a></li>
+                        <li><a href="/team/">ჩვენი გუნდი</a></li>
+                        <li><a href="/process/">სამუშაო პროცესი</a></li>
+                        <li><a href="/pricing/">ფასები</a></li>
+                        <li><a href="/testimonial/">შეფასებები</a></li>
+                        <li><a href="/faq/">კითხვები</a></li>
                     </ul>
                 </li>
                 <li className="sidebar-dropdown">
@@ -132,11 +131,11 @@ function Sidebar() {
                     </button>
                     </div>
                     <ul className="sidebar-dropdown-menu">
-                        <li><a href="blog">ბლოგი</a></li>
-                        <li><a href="single_post">სტატია</a></li>
+                        <li><a href="/blog/">ბლოგი</a></li>
+                        <li><a href="/single_post/">სტატია</a></li>
                     </ul>
                 </li>
-                <li className="below-dropdown"><a href="contact">კონტაქტი</a></li>
+                <li className="below-dropdown"><a href="/contact/">კონტაქტი</a></li>
             </ul>
         </div>
         </div>

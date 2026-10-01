@@ -34,7 +34,7 @@ const DigitalProcessSection = () => {
                                             პროცესი შენი ვებსაიტის შექმნას მარტივსა და გასაგებს ხდის.
                                         </p>
                                         <div className="link-wrapper">
-                                            <a href="./contact">დაიწყე ახლა</a>
+                                            <a href="/contact/">დაიწყე ახლა</a>
                                             <i className="fa-solid fa-arrow-circle-right"></i>
                                         </div>
                                     </div>

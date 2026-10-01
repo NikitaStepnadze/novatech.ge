@@ -54,7 +54,7 @@ function ChooseUsSection(){
                                                     <div className="card card-chooseus-cta">
                                                         <h5>ერთად შევქმნათ თქვენი ბიზნესის ციფრული მომავალი.</h5>
                                                         <div className="link-wrapper">
-                                                            <a href="./contact">დაგვიკავშირდი</a>
+                                                            <a href="/contact/">დაგვიკავშირდი</a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>
                                                         </div>
                                                     </div>

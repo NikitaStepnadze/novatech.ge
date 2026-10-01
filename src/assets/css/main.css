@@ -77,14 +77,24 @@
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
+    /* Everything except "@" (U+0040): the file maps it to an empty glyph, so
+       e-mail addresses set in ForBig lost their @. It now falls back to
+       Plus Jakarta Sans. */
+    unicode-range: U+0000-003F, U+0041-10FFFF;
 }
 
+/* ForSmall's glyphs are drawn very condensed, so at any given font-size they
+   read a size or two smaller than the Plus Jakarta Sans fallback beside them.
+   size-adjust scales only the glyphs this file actually supplies (Georgian,
+   digits, punctuation), so every ForSmall text grows without touching the
+   font-size tokens that ForBig headings and Latin text share. */
 @font-face {
     font-family: 'ForSmall';
     src: url('/content/fonts/forsmall.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
+    size-adjust: 120%;
 }
 
 /* ================== 02 Root Variables ================== */
@@ -1231,10 +1241,14 @@ body.lightmode .banner-layout-wrapper::before {
 }
 
 @media (max-width: 767px) {
-    /* The strip is too wide to stay legible on a phone, so it crops to a
-       squarer box centred on the artwork instead of shrinking to a sliver. */
+    /* The strip is too wide to stay legible on a phone. A centred crop cut
+       the headline in half, so the phone shows the headline end of the strip
+       (it fills the left ~45%) with a sliver of the blue sweep after it. */
     .banner-inner-visual {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 5 / 2;
+    }
+    .banner-inner-img {
+        object-position: left center;
     }
 }
 
@@ -4015,6 +4029,8 @@ body.lightmode .newsletter-layout{
     padding: 30px 30px 30px 30px;
     display: flex;
     width: 515px;
+    max-width: 100%;
+    min-width: 0;
     flex-direction: column;
     justify-content: space-between;
     gap: 1em;

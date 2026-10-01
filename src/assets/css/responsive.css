@@ -313,9 +313,6 @@
     .section-banner{
         padding: 0px 20px 0px 20px;
     }
-    .section-banner:has(.banner-inner){
-        padding-bottom: calc((100vw - 40px) * 0.26503);
-    }
     .section-guide{
         padding: 0px 20px 0px 20px;
     }
@@ -812,5 +809,226 @@
     }
     .grid-spacer-y-md-5 { 
         --bs-gutter-y: 50px; 
+    }
+}
+
+/* ================== 05. Phone Layout Pass ================== */
+
+/* Decorative layers (the pricing portal, the hero's offset gradient, device
+   stands) reach past the right edge on narrow screens and let the whole page
+   drift sideways. `clip` trims them without making html/body scroll
+   containers, so `position: sticky` keeps working; `hidden` on html is the
+   fallback for browsers without `clip`. */
+html {
+    overflow-x: hidden;
+}
+
+@supports (overflow-x: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
+/* Plain links wrapped around heading text (the contact phone / e-mail) would
+   otherwise pick up the global `a` rule and drop to the small body font. */
+:is(h1, h2, h3, h4, h5, h6) > a.text-reset{
+    font: inherit;
+}
+
+/* Tablet and down: anything that was sized for the desktop columns. */
+@media screen and (max-width: 991px) {
+    /* Bootstrap gutters wider than the 20px section padding pushed every
+       .row 5px past both screen edges. Rows that set their own gutter from
+       768px up (grid-spacer-sm-*) keep it. */
+    .grid-spacer-4:not([class*="grid-spacer-sm-"]),
+    .grid-spacer-5:not([class*="grid-spacer-sm-"]),
+    .g-4,
+    .g-5{
+        --bs-gutter-x: 30px;
+    }
+
+    /* Same fluid-heading reasoning as the phone block below, for the tablet
+       range where h2 was a fixed 56px. */
+    h2{
+        font-size: clamp(40px, 6.3vw, 56px);
+    }
+    h3{
+        font-size: clamp(30px, 4.5vw, 38px);
+    }
+    .heading-container-short,
+    .heading-container-medium{
+        max-width: 100%;
+    }
+    /* The CTA card is only half the column wide on tablets. */
+    .cta-service-banner .title-heading{
+        font-size: clamp(24px, 3.4vw, 38px);
+    }
+    /* Blog sidebar on tablets: recent posts and the CTA sit side by side, and
+       the CTA was squeezed to ~175px. They now split the row evenly. */
+    .recent-post + .cta-service-banner,
+    .flex-md-row > .recent-post{
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    /* A fixed 515px column, wider than the card itself once the cards stack. */
+    .chooseus-content{
+        width: auto;
+        flex: 1 1 auto;
+    }
+
+    /* The hero clip has a bright light band right where the stacked headline
+       lands, which washed the second line out. A soft dark halo keeps it
+       readable without dimming the clip. */
+    .section-banner .title-heading-banner{
+        text-shadow: 0 2px 24px rgba(4, 4, 4, 0.55), 0 1px 3px rgba(4, 4, 4, 0.35);
+    }
+    .section-banner .banner-content p{
+        text-shadow: 0 1px 12px rgba(4, 4, 4, 0.8), 0 0 2px rgba(4, 4, 4, 0.6);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Display headings: long Georgian words ("გადაწყვეტილებები") are wider
+       than a phone at the old fixed sizes, and the gradient text fill paints
+       nothing past the box, so the word ends just vanished. Sizes now track the
+       viewport and top out at the previous phone sizes. The vw factors come
+       from the widest words in the copy: "გადაწყვეტილებები," is ~12.7em in
+       ForBig and has to fit a 350px column at 390px. overflow-wrap is the last
+       resort for a word that still does not fit. */
+    h1{
+        font-size: clamp(32px, 10.5vw, 45px);
+    }
+    h2{
+        font-size: clamp(24px, 7vw, 40px);
+    }
+    h3{
+        font-size: clamp(21px, 6.2vw, 30px);
+    }
+    h4{
+        font-size: clamp(19px, 5.6vw, 22px);
+    }
+    h5{
+        font-size: clamp(17px, 5vw, 20px);
+    }
+    /* Prices are short, so they keep their size instead of following h3. */
+    .card-pricing h3{
+        font-size: var(--font-size-6xl);
+    }
+    h1, h2, h3, h4, h5, h6{
+        overflow-wrap: break-word;
+    }
+    .title-heading,
+    .title-heading-banner{
+        max-width: 100%;
+    }
+
+    /* ForSmall copy. size-adjust already scales its glyphs everywhere; the
+       12px phone sizes were still below a comfortable reading size, so they
+       come up a step. */
+    p{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    button, a{
+        font-size: var(--font-size-sm);
+    }
+    .sub-heading span,
+    .banner-video-content p,
+    .guide-video-container p,
+    .cs-component a,
+    .copyright,
+    .legal-link{
+        font-size: 13px;
+    }
+    .footer-list a,
+    .contact-list li{
+        font-size: var(--font-size-sm);
+    }
+
+    /* Vertical rhythm: 120px above and below every section stacked into
+       240px of empty black between sections on a phone. */
+    .section{
+        padding: 90px 20px 90px 20px;
+    }
+
+    /* Single service hero: the title panel sat absolutely inside a 500px image,
+       and on a phone its copy is taller than that, so the heading was cut off
+       at the top and the paragraph ran under the image. It now sits below a
+       shorter image, still tucked up into its bottom edge with the notch. */
+    .image-container:has(> .single-service-title-layout){
+        flex-direction: column;
+    }
+    .single-service-img{
+        height: 300px;
+    }
+    .single-service-title-layout{
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: -70px;
+    }
+    .single-service-title-wrapper{
+        padding-right: 16px;
+    }
+    .single-service-title-layout .single-service-spacer{
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Two-up check-item rows (single service, package detail): half a phone
+       is too narrow for words like "ორიენტირებული", so they stack. */
+    .row.row-cols-2:has(.fa-circle-check) > .col{
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .single-service-title-layout > div:first-child{
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+    .single-service-title-layout > .single-service-spacer{
+        flex-shrink: 0;
+    }
+
+    /* Package comparison: the feature column stays pinned while the package
+       columns scroll under it, so a row never loses its label. */
+    .package-compare{
+        min-width: 600px;
+    }
+    .package-compare th,
+    .package-compare td{
+        padding: 14px 12px;
+    }
+    .package-compare tbody th,
+    .package-compare thead th:first-child,
+    .package-compare tfoot td:first-child{
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        min-width: 140px;
+        max-width: 160px;
+        background-color: var(--accent-color-4);
+    }
+}
+
+/* Small phones (iPhone SE / mini, most Androids at 360px). */
+@media screen and (max-width: 380px) {
+    .section{
+        padding: 80px 16px 80px 16px;
+    }
+    .section-banner,
+    .section-guide,
+    .section-wrapper-digital-process{
+        padding: 0px 16px 0px 16px;
+    }
+    .section-footer{
+        padding: 0px 16px 16px 16px;
+    }
+    .grid-spacer-4:not([class*="grid-spacer-sm-"]),
+    .grid-spacer-5:not([class*="grid-spacer-sm-"]),
+    .g-4,
+    .g-5{
+        --bs-gutter-x: 24px;
     }
 }

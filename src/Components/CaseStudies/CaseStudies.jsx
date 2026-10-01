@@ -29,7 +29,7 @@ const CaseStudiesSection = ({ noPadding }) => {
                                     <div className="d-flex flex-column h-100 justify-content-end gspace-2">
                                         <p>შედეგზე მხოლოდ არ ვსაუბრობთ — ვქმნით მას. აქ ნახავ ჩვენს პროექტებს, რომლებმაც ბიზნესებს ციფრული განვითარება დაუჩქარა.</p>
                                         <div className="link-wrapper">
-                                            <a href="./case_studies">ყველა პროექტი</a>
+                                            <a href="/case_studies/">ყველა პროექტი</a>
                                             <i className="fa-solid fa-circle-arrow-right"></i>
                                         </div>
                                     </div>
