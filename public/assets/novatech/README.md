@@ -26,6 +26,20 @@ Generated, web-optimised derivatives. Originals live in `media-source/`
                transparent `portal-poster.webp` still instead. A Safari HEVC
                alpha version needs an x265 build with alpha support (or
                macOS `avconvert`); the winget ffmpeg build lacks it.
+               `expertise-portal.webm` (behind the "21+" counter) comes from
+               `media-source/blue-portal.mov` the same way (crop 1080x1080 at
+               x=420, 640px, CRF 32), plus: frames 0–4 dropped (the portal
+               opens from a dot), the last second crossfaded into frames 5–29
+               so the 8.8s loop has no seam, and the alpha multiplied by a
+               radial fade (r 220→320px) so the smoke never shows the crop's
+               square edge. `pricing-portal.webm` (behind the pricing cards)
+               comes from `media-source/electric-portal.mov` (crop 1080x1080
+               at x=420, kept at full 1080px, CRF 38 — the thin filaments
+               smear visibly at 720px or above CRF ~40, and the clip spans up
+               to 1100px on desktop). The source already loops seamlessly;
+               the outer 42px of the square get a radial alpha
+               fade because the page slowly rotates the clip. All three clips
+               play through `Hooks/AlphaVideo`.
 - `logos/`   – Partner/tool logos from `media-source/tools_logos`, trimmed and
                composited onto a flat white rounded card (320x160) so every
                mark stays legible on both the light and dark theme's partner

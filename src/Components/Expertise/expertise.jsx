@@ -4,6 +4,7 @@ import React from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
 import CounterOnScroll from "../Hooks/CounterOnScroll";
 import LazyVideo from "../Hooks/LazyVideo";
+import AlphaVideo from "../Hooks/AlphaVideo";
 
 function ExpertiseSection(){
 
@@ -77,7 +78,12 @@ function ExpertiseSection(){
                                 <AnimateOnScroll animation="fadeInUp">
                                     <div className="card card-expertise card-expertise-counter animate-box">
                                         <div className="d-flex flex-row gspace-2 align-items-center">
-                                            <div className="d-flex flex-row align-items-center">
+                                            <div className="d-flex flex-row align-items-center expertise-counter-anchor">
+                                            <AlphaVideo
+                                                className="expertise-counter-portal"
+                                                src="/assets/novatech/video/expertise-portal.webm"
+                                                poster="/assets/novatech/video/expertise-portal-poster.webp"
+                                            />
                                             <CounterOnScroll
                                                 target={21}
                                                 suffix="+"

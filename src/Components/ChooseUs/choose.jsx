@@ -1,28 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { whychooseus } from "../../Data/ChooseUsData";
 import ChooseUsCard from "../Card/ChoooseUsCard";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
-import LazyVideo from "../Hooks/LazyVideo";
-
-// Safari (and every iOS browser, which all run WebKit) plays VP9 WebM but drops
-// its alpha channel, so the transparent portal would sit in a black box there.
-// Those visitors get the transparent still instead.
-function supportsAlphaWebm(){
-    const ua = navigator.userAgent;
-    const isWebKitOnly = /AppleWebKit/.test(ua) && !/Chrome|Chromium|Edg|Android/.test(ua);
-    const isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    return !isWebKitOnly && !isIOS;
-}
+import AlphaVideo from "../Hooks/AlphaVideo";
 
 function ChooseUsSection(){
-    const [alphaVideo, setAlphaVideo] = useState(true);
-
-    useEffect(() => {
-        setAlphaVideo(supportsAlphaWebm());
-    }, []);
-
     return(
         <>
             <div className="section">
@@ -54,16 +38,12 @@ function ChooseUsSection(){
                                     </div>
                                 </AnimateOnScroll>
                                 <div className="image-container">
-                                    {alphaVideo ? (
-                                        <LazyVideo
-                                            className="chooseus-img chooseus-video"
-                                            src="/assets/novatech/video/portal.webm"
-                                            poster="/assets/novatech/video/portal-poster.webp"
-                                            aria-label="რატომ ჩვენ"
-                                        />
-                                    ) : (
-                                        <img src="/assets/novatech/video/portal-poster.webp" alt="რატომ ჩვენ" className="chooseus-img chooseus-video" loading="lazy" decoding="async" />
-                                    )}
+                                    <AlphaVideo
+                                        className="chooseus-img chooseus-video"
+                                        src="/assets/novatech/video/portal.webm"
+                                        poster="/assets/novatech/video/portal-poster.webp"
+                                        alt="რატომ ჩვენ"
+                                    />
                                     <div className="card-chooseus-cta-layout">
                                         <div className="chooseus-cta-spacer"></div>
                                         <div className="d-flex flex-column align-items-end">

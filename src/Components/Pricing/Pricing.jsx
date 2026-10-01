@@ -2,6 +2,7 @@
 
 import React from "react";
 import AnimateOnScroll from "../Hooks/AnimateOnScroll";
+import AlphaVideo from "../Hooks/AlphaVideo";
 import { getPackage, packagePath } from "../../Data/PackagesData";
 
 const plus = getPackage("plus");
@@ -25,7 +26,7 @@ function PricingPlanSection(){
                             </h2>
                         </div>
                     </AnimateOnScroll>
-                    <div className="row row-cols-lg-3 row-cols-1 grid-spacer-2">
+                    <div className="row row-cols-lg-3 row-cols-1 grid-spacer-2 pricing-portal-stage">
                         <div className="col">
                             <div className="pricing-container">
                                 <AnimateOnScroll animation="fadeInLeft" speed="normal">
@@ -66,7 +67,16 @@ function PricingPlanSection(){
                                 </AnimateOnScroll>
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col pricing-portal-anchor">
+                            <AnimateOnScroll animation="fadeInUp" speed="slow">
+                                <div className="pricing-portal-wrap">
+                                    <AlphaVideo
+                                        className="pricing-portal"
+                                        src="/assets/novatech/video/pricing-portal.webm"
+                                        poster="/assets/novatech/video/pricing-portal-poster.webp"
+                                    />
+                                </div>
+                            </AnimateOnScroll>
                             <AnimateOnScroll animation="fadeInUp" speed="slow">
                                 <div className="card card-pricing pricing-highlight">
                                     <div className="spacer" />

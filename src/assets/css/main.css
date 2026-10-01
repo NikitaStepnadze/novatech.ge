@@ -2096,26 +2096,36 @@ body.lightmode .navbar-icon-wrapper{
     isolation: isolate;
 }
 
-/* Blurred artwork behind the counter, with a themed scrim so the copy stays legible */
-.card-expertise.card-expertise-counter::before,
-.card-expertise.card-expertise-counter::after{
-    content: "";
+/* A transparent portal clip opens behind the counter, so the number reads as
+   coming out of it. Anchored to the counter rather than the card so it stays
+   centred on the digits at every breakpoint; the card's `isolation` keeps the
+   negative z-index above the card background and below the copy. */
+.expertise-counter-anchor{
+    position: relative;
+}
+
+.expertise-counter-portal{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Relative to the counter's line box so the ring scales with the digits
+       at every breakpoint (210px around the 100px desktop digits). */
+    height: 162%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    max-width: none;
+    /* Nudged left so the ring centres on the digits rather than digits + "+". */
+    transform: translate(-57%, -50%);
     z-index: -1;
     pointer-events: none;
 }
 
-.card-expertise.card-expertise-counter::before{
-    inset: -4px;
-    background: url("/assets/novatech/img/expertise-counter-bg.webp") center / cover no-repeat;
-    filter: blur(1.5px);
-}
-
-.card-expertise.card-expertise-counter::after{
-    inset: 0;
-    background-image: radial-gradient(at top left,
-        color-mix(in srgb, var(--accent-color-3) 70%, transparent) 0%,
-        color-mix(in srgb, var(--accent-color-4) 80%, transparent) 60%);
+/* The outlined digits disappear against the bright vortex, so they glow
+   white out of it instead. */
+.card-expertise.card-expertise-counter .counter,
+.card-expertise.card-expertise-counter .counter-detail{
+    color: #FFFFFF;
+    text-shadow: 0 0 18px var(--accent-color), 0 0 4px var(--accent-color);
 }
 
 .card-expertise.card-expertise-counter:hover{
@@ -3168,6 +3178,76 @@ body.lightmode .card-blog{
     height: 3px;
     background-color: transparent;
     background-image: radial-gradient(at center center, var(--accent-color-6) 0%, var(--accent-transparent) 50%);
+}
+
+/* An electric portal clip burns behind the card grid, centred on the ALL IN
+   card so the ring reaches out behind the side cards and through the gutters.
+   The stage's `isolation` keeps the negative z-index above the section
+   background; the anchor column must not form a stacking context of its own.
+   `overflow-x: clip` stops the ring from widening the page on phones without
+   turning the row into a scroll container. */
+.pricing-portal-stage{
+    position: relative;
+    isolation: isolate;
+    overflow-x: clip;
+}
+
+.pricing-portal-anchor{
+    position: relative;
+}
+
+/* The wrapper carries the placement so AnimateOnScroll can fade it in with
+   the cards; animate.css drives `transform`, which leaves the `translate`
+   centring and the clip's own `rotate` untouched. */
+.pricing-portal-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(1100px, 170vw);
+    aspect-ratio: 1 / 1;
+    translate: -50% -50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.pricing-portal{
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    /* The clip already loops; a slow turn on top keeps the ring from reading
+       as the same shape every six seconds. The edge of the square is faded
+       out in the asset, so the corners never show while it spins. */
+    animation: pricing-portal-spin 90s linear infinite;
+}
+
+@keyframes pricing-portal-spin{
+    to { rotate: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-portal{
+        animation: none;
+    }
+}
+
+/* The cards turn to frosted glass so the energy glows through them, softened
+   enough that the copy on top stays legible. Same gradients as above, made
+   translucent. */
+.pricing-portal-stage .card-pricing-title,
+.pricing-portal-stage .pricing-highlight-box,
+.pricing-portal-stage .card-pricing{
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+}
+
+.pricing-portal-stage .card-pricing-title,
+.pricing-portal-stage .pricing-highlight-box{
+    background-image: radial-gradient(at top left, color-mix(in srgb, var(--accent-color-3) 70%, transparent) 0%, color-mix(in srgb, var(--accent-color-4) 78%, transparent) 50%);
+}
+
+.pricing-portal-stage .card-pricing{
+    background-image: radial-gradient(at bottom right, color-mix(in srgb, var(--accent-color-3) 70%, transparent) 0%, color-mix(in srgb, var(--accent-color-4) 78%, transparent) 50%);
 }
 
 /* ================== 34. Core Benefits ================== */
