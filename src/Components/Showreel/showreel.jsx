@@ -120,7 +120,7 @@ function ShowreelSection() {
                                         <img src={item.icon} alt="" aria-hidden="true" loading="lazy" />
                                     </div>
                                     <div className="d-flex flex-column gspace-1">
-                                        <h5>{item.title}</h5>
+                                        <h3 className="h5">{item.title}</h3>
                                         <p>{item.content}</p>
                                     </div>
                                 </div>

@@ -18,7 +18,7 @@ const DigitalStepCard = ({ icon, step, title, content, isFirst }) => {
                                 <span>{step}</span>
                             </div>
                             <div className="d-flex flex-column gspace-2">
-                                <h5>{title}</h5>
+                                <h3 className="h5">{title}</h3>
                                 <p>{content}</p>
                             </div>
                     </div>

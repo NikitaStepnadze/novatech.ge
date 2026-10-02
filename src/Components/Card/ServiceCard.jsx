@@ -17,7 +17,7 @@ const ServiceCard = ({icon, title, content, link, speed = ""}) => {
                             </div>
                         </div>
                         <div className="service-title">
-                            <h4>{title}</h4>
+                            <h3 className="h4">{title}</h3>
                         </div>
                     </div>
                     <p>{content}</p>

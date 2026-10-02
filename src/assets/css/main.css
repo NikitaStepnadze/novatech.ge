@@ -299,37 +299,39 @@ body.lightmode .keep-dark {
     --error-color: #e63946;
 }  
 
-h1 {
+h1, .h1 {
     font-size: var(--font-size-15xl);
     line-height: var(--line-height-normal);
 }
 
-h2{
+h2, .h2 {
     font-size: var(--font-size-14xl);
     line-height: var(--line-height-snug);
 }
 
-h3 {
+h3, .h3 {
     font-size: var(--font-size-11xl);
     line-height: var(--line-height-snug);
 }
 
-h4 {
+h4, .h4 {
     font-size: var(--font-size-5xl);
     line-height: var(--line-height-loose);
 }
 
-h5 {
+h5, .h5 {
     font-size: var(--font-size-3xl);
     line-height: var(--line-height-loose);
 }
 
-h6 {
+h6, .h6 {
     font-size: var(--font-size-xl);
     line-height: var(--line-height-loose);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: var(--heading-font);
     font-weight: var(--font-weight-bold);
     margin: 0;
@@ -1677,7 +1679,7 @@ body.lightmode .navbar-icon-wrapper{
     box-shadow: var(--box-shadow-bottom-right);
 }
 
-.navbar-icon-wrapper h6{
+.navbar-icon-wrapper .h6{
     margin-right: 1em;
 }
 
@@ -4725,13 +4727,13 @@ body.lightmode .cta-service-banner::before{
    both themes too, rather than switching with the site-wide text color.
    The heading also needs the gradient text-clip effect (.title-heading)
    turned off, since that paints over a plain color. */
-.guide-banner .guide-content h3,
+.guide-banner .guide-content .h3,
 .guide-banner .guide-content p,
 .guide-banner .guide-video-container p {
     color: #FFFFFF;
 }
 
-.guide-banner .guide-content h3.title-heading {
+.guide-banner .guide-content .h3.title-heading {
     background-image: none;
     -webkit-text-fill-color: #FFFFFF;
 }
@@ -4746,10 +4748,10 @@ body.lightmode .cta-service-banner::before{
 .counter,
 .counter-detail,
 .counter-text,
-.card-pricing h3,
-.case-studies-title h4,
+.card-pricing .h3,
+.case-studies-title .h4,
 .chooseus-title,
-.service-title h4,
+.service-title .h4,
 .accordion .accordion-button,
 .nav-link {
     font-family: var(--heading-font);

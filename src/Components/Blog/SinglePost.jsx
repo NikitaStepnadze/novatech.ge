@@ -9,7 +9,7 @@ const BlogPostSection = () => {
                 <div className="col col-lg-4 order-2 order-lg-1">
                     <div className="d-flex flex-column flex-md-row flex-lg-column gspace-5">
                         <div className="card recent-post">
-                            <h4>ბოლო სტატიები</h4>
+                            <h2 className="h4">ბოლო სტატიები</h2>
                             {blogs.map((blog) => (
                                 <div
                                     className="d-flex flex-row w-100 gspace-1"
@@ -35,7 +35,7 @@ const BlogPostSection = () => {
                         </div>
                         <div className="cta-service-banner">
                             <div className="spacer"></div>
-                            <h3 className="title-heading">აიყვანე ბიზნესი ახალ საფეხურზე!</h3>
+                            <h2 className="h3 title-heading">აიყვანე ბიზნესი ახალ საფეხურზე!</h2>
                             <p>
                                 შენი იდეა. ჩვენი ტექნოლოგია. ერთად — ციფრული მომავალი. მოგვწერე და დაიწყე შენი ვებსაიტის შექმნა.
                             </p>
@@ -54,7 +54,7 @@ const BlogPostSection = () => {
                             alt="სტატია"
                             className="img-fluid"  loading="lazy" decoding="async" />
                         </div>
-                        <h3>რატომ სჭირდება ბიზნესს ვებსაიტი?</h3>
+                        <h2 className="h3">რატომ სჭირდება ბიზნესს ვებსაიტი?</h2>
                         <div className="underline-muted-full"></div>
                         <div className="d-flex flex-row align-items-center justify-content-between">
                             <div className="d-flex flex-row align-items-center gspace-2">
@@ -98,7 +98,7 @@ const BlogPostSection = () => {
                             პირველი შთაბეჭდილება ონლაინ იწყება. დროა, შენი ონლაინ სივრცე ისეთივე ძლიერი იყოს, როგორიც შენი ბიზნესია.
                         </p>
                         <div>
-                        <h5>NOVATECH</h5>
+                        <div className="h5">NOVATECH</div>
                         <p className="quote-description">ციფრული სააგენტო</p>
                         </div>
                     </div>

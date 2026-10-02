@@ -59,7 +59,7 @@ function NewsletterSection() {
                         <div className="d-flex flex-column gspace-5 position-relative z-2">
                             <AnimateOnScroll animation="fadeInLeft" speed="normal">
                                 <div className="d-flex flex-column gspace-2">
-                                    <h3 className="title-heading">იყავი ერთი ნაბიჯით წინ</h3>
+                                    <h2 className="h3 title-heading">იყავი ერთი ნაბიჯით წინ</h2>
                                     <p>
                                         მიიღე სასარგებლო რჩევები და სიახლეები ციფრული განვითარების შესახებ
                                         პირდაპირ შენს ელ. ფოსტაზე.

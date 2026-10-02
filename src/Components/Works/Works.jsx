@@ -63,7 +63,7 @@ function WorksSection() {
                                 <DeviceMockup device={deviceType} item={item} />
                                 <figcaption className="works-item-meta">
                                     <span className="works-item-category">{item.category}</span>
-                                    <h5 className="works-item-title">{item.title}</h5>
+                                    <h3 className="h5 works-item-title">{item.title}</h3>
                                 </figcaption>
                             </figure>
                         </AnimateOnScroll>

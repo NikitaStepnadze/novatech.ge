@@ -25,7 +25,7 @@ const   TeamCard = ({ name, title, image, socials }) => {
                 </div>
             </div>
             <div className="team-profile">
-                <h4>{name}</h4>
+                <h3 className="h4">{name}</h3>
                 <span className="title">{title}</span>
             </div>
         </div>

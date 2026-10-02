@@ -57,17 +57,6 @@ function BannerHomeSection() {
                                                     <i className="fa-solid fa-arrow-right"></i>
                                                 </div>
                                             </a>
-                                            <div className="banner-reviewer">
-                                                <div className="d-flex flex-row align-items-center">
-                                                    <img src="/assets/novatech/img/avatar-1.webp" alt="შემფასებელი" className="avatar" />
-                                                    <img src="/assets/novatech/img/avatar-2.webp" alt="შემფასებელი" className="avatar" />
-                                                    <img src="/assets/novatech/img/avatar-3.webp" alt="შემფასებელი" className="avatar" />
-                                                </div>
-                                                <div className="detail">
-                                                    <span>2.7k დადებითი</span>
-                                                    <span>შეფასება</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </AnimateOnScroll>

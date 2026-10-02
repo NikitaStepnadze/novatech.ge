@@ -30,7 +30,7 @@ function ExpertiseSection(){
                                         <div className="card-expertise-wrapper">
                                             <AnimateOnScroll animation="fadeInDown" speed="normal">
                                                 <div className="card card-expertise">
-                                                    <h4>მზად ხარ ციფრული ნაბიჯისთვის?</h4>
+                                                    <div className="h4">მზად ხარ ციფრული ნაბიჯისთვის?</div>
                                                     <p>ვქმნით ვებსაიტს, რომელიც ზუსტად შენი ბიზნესის მოთხოვნებს მოერგება.</p>
                                                     <div className="d-flex align-items-center flex-row gspace-2 expertise-link">
                                                         <a href="/contact/">უფასო კონსულტაცია</a>
@@ -64,7 +64,7 @@ function ExpertiseSection(){
                             </p>
                             <div className="d-flex flex-column flex-md-row gspace-2">
                                 <div className="expertise-list">
-                                    <h5>რას ვაკეთებთ საუკეთესოდ</h5>
+                                    <h3 className="h5">რას ვაკეთებთ საუკეთესოდ</h3>
                                     <ul className="check-list">
                                         <li><a href="/single_services/">ბიზნეს ვებსაიტი</a></li>
                                         <li><a href="/single_services/">ონლაინ მაღაზია</a></li>
@@ -91,7 +91,7 @@ function ExpertiseSection(){
                                                 suffixClassName="counter-detail"
                                             />
                                             </div>
-                                            <h6>წარმატებით დასრულებული ციფრული პროექტი</h6>
+                                            <div className="h6">წარმატებით დასრულებული ციფრული პროექტი</div>
                                         </div>
                                         <p>
                                             ყოველი პროექტი ჩვენთვის ახალი გამოწვევაა - ვქმნით ვებსაიტებს, რომლებიც ბიზნესს რეალურ შედეგს მოუტანს.

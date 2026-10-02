@@ -19,7 +19,7 @@ const ChooseUsCard = ({icon, title, content, link, speed}) => {
                         <div className="chooseus-spacer below"></div>
                     </div>
                     <div className="chooseus-content">
-                        <h4 className="chooseus-title">{title}</h4>
+                        <h3 className="h4 chooseus-title">{title}</h3>
                         <p>{content}</p>
                         <div className="link-wrapper">
                             <a href={link}>ვრცლად</a>

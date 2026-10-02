@@ -33,7 +33,7 @@ function PricingPlanSection(){
                                     <div className="card card-pricing-title">
                                         <div className="spacer" />
                                         <div className="content">
-                                            <h3 className="title-heading">ერთად შევარჩიოთ შენთვის სწორი პაკეტი!</h3>
+                                            <div className="h3 title-heading">ერთად შევარჩიოთ შენთვის სწორი პაკეტი!</div>
                                             <div className="link-wrapper">
                                             <a href="/contact/">უფასო კონსულტაცია</a>
                                             <i className="fa-solid fa-arrow-circle-right"></i>
@@ -44,10 +44,10 @@ function PricingPlanSection(){
 
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                     <div className="card card-pricing">
-                                        <h4>{plus.name}</h4>
+                                        <h3 className="h4">{plus.name}</h3>
                                         <p>{plus.tagline}</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>{plus.price}₾</h3>
+                                            <div className="h3">{plus.price}₾</div>
                                             <p className="price-was">{plus.oldPrice}₾</p>
                                         </div>
                                         <a href={packagePath(plus.slug)} className="btn btn-accent">
@@ -80,10 +80,10 @@ function PricingPlanSection(){
                             <AnimateOnScroll animation="fadeInUp" speed="slow">
                                 <div className="card card-pricing pricing-highlight">
                                     <div className="spacer" />
-                                    <h4>{allIn.name}</h4>
+                                    <h3 className="h4">{allIn.name}</h3>
                                     <p>{allIn.tagline}</p>
                                     <div className="d-flex flex-row gspace-1 align-items-center">
-                                        <h3>{allIn.price}₾</h3>
+                                        <div className="h3">{allIn.price}₾</div>
                                         <p className="price-was">{allIn.oldPrice}₾</p>
                                     </div>
                                     <a href={packagePath(allIn.slug)} className="btn btn-accent">
@@ -121,7 +121,7 @@ function PricingPlanSection(){
                                 <AnimateOnScroll animation="fadeInRight" speed="normal">
                                     <div className="card pricing-highlight-box">
                                         <div className="d-flex flex-column gspace-2 w-100">
-                                            <h5>გინდა მეტი? აირჩიე {ultra.name} — {ultra.price}₾</h5>
+                                            <h3 className="h5">გინდა მეტი? აირჩიე {ultra.name} — {ultra.price}₾</h3>
                                             <div className="d-flex flex-column gspace-2">
                                                 {ultra.features.map((feature) => (
                                                     <div className="pricing-highlights" key={feature.title}>
@@ -137,10 +137,10 @@ function PricingPlanSection(){
 
                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
                                     <div className="card card-pricing">
-                                        <h4>{pro.name}</h4>
+                                        <h3 className="h4">{pro.name}</h3>
                                         <p>{pro.tagline}</p>
                                         <div className="d-flex flex-row gspace-1 align-items-center h-100">
-                                            <h3>{pro.price}₾</h3>
+                                            <div className="h3">{pro.price}₾</div>
                                             <p className="price-was">{pro.oldPrice}₾</p>
                                         </div>
                                         <a href={packagePath(pro.slug)} className="btn btn-accent">

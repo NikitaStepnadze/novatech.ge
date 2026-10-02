@@ -19,7 +19,7 @@ const CaseStudyCard = ({ title, description, tags, className, size }) => {
                         </div>
                     )}
                     <div className="d-flex flex-column gspace-2">
-                        <a href="#" className="case-studies-title"><h4>{title}</h4></a>
+                        <a href="#" className="case-studies-title"><h3 className="h4">{title}</h3></a>
                         <p>{description}</p>
                     </div>
                     {size === "small" && (

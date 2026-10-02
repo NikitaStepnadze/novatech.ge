@@ -52,7 +52,7 @@ function ChooseUsSection(){
                                                 <AnimateOnScroll animation="fadeInUp" speed="normal">
 
                                                     <div className="card card-chooseus-cta">
-                                                        <h5>ერთად შევქმნათ თქვენი ბიზნესის ციფრული მომავალი.</h5>
+                                                        <div className="h5">ერთად შევქმნათ თქვენი ბიზნესის ციფრული მომავალი.</div>
                                                         <div className="link-wrapper">
                                                             <a href="/contact/">დაგვიკავშირდი</a>
                                                             <i className="fa-solid fa-circle-arrow-right"></i>

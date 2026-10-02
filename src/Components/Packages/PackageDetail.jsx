@@ -42,7 +42,7 @@ const PackageDetailSection = ({ slug }) => {
                                             </div>
                                         </AnimateOnScroll>
                                         <AnimateOnScroll animation="fadeInRight" speed="normal">
-                                            <h3 className="title-heading">{pkg.tagline}</h3>
+                                            <h2 className="h3 title-heading">{pkg.tagline}</h2>
                                         </AnimateOnScroll>
                                         <p>{pkg.overview}</p>
                                     </div>
@@ -55,7 +55,7 @@ const PackageDetailSection = ({ slug }) => {
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
                         <div className="col col-lg-8">
                             <div className="d-flex flex-column gspace-2">
-                                <h4>ვისთვის არის ეს პაკეტი</h4>
+                                <h3 className="h4">ვისთვის არის ეს პაკეტი</h3>
                                 <ul className="check-list">
                                     {pkg.idealFor.map((item) => (
                                         <li key={item}>{item}</li>
@@ -63,7 +63,7 @@ const PackageDetailSection = ({ slug }) => {
                                 </ul>
 
                                 <div className="card service-included">
-                                    <h4>რას მოიცავს</h4>
+                                    <h3 className="h4">რას მოიცავს</h3>
                                     <div className="underline-accent-short"></div>
                                     {includedPackages.length > 0 && (
                                         <p>
@@ -76,7 +76,7 @@ const PackageDetailSection = ({ slug }) => {
                                                 <div className="d-flex flex-row gspace-1">
                                                     <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                     <div className="d-flex flex-column gspace-0">
-                                                        <h5>{feature.title}</h5>
+                                                        <h4 className="h5">{feature.title}</h4>
                                                         <p>{feature.text}</p>
                                                     </div>
                                                 </div>
@@ -87,15 +87,15 @@ const PackageDetailSection = ({ slug }) => {
 
                                 {includedPackages.length > 0 && (
                                     <div className="card service-included">
-                                        <h4>ასევე შედის</h4>
+                                        <h3 className="h4">ასევე შედის</h3>
                                         <div className="underline-accent-short"></div>
                                         <div className="row row-cols-md-2 row-cols-1 grid-spacer-3">
                                             {includedPackages.map((included) => (
                                                 <div className="col" key={included.slug}>
                                                     <div className="d-flex flex-column gspace-1">
-                                                        <h5>
+                                                        <h4 className="h5">
                                                             <Link href={packagePath(included.slug)}>{included.name}</Link>
-                                                        </h5>
+                                                        </h4>
                                                         <ul className="check-list">
                                                             {getPackageFeatures(included).map((feature) => (
                                                                 <li key={feature.title}>{feature.title}</li>
@@ -111,7 +111,7 @@ const PackageDetailSection = ({ slug }) => {
                                 {nextPackage && (
                                     <div className="card pricing-highlight-box">
                                         <div className="d-flex flex-column gspace-2 w-100">
-                                            <h5>გინდა მეტი? აირჩიე {nextPackage.name} — {nextPackage.price}₾</h5>
+                                            <h4 className="h5">გინდა მეტი? აირჩიე {nextPackage.name} — {nextPackage.price}₾</h4>
                                             <div className="d-flex flex-column gspace-2">
                                                 {nextPackage.features.slice(0, 3).map((feature) => (
                                                     <div className="pricing-highlights" key={feature.title}>
@@ -130,10 +130,10 @@ const PackageDetailSection = ({ slug }) => {
                             <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-between gspace-5">
                                 <div className={`card card-pricing${pkg.featured ? " pricing-highlight" : ""}`}>
                                     {pkg.featured && <div className="spacer" />}
-                                    <h4>{pkg.name}</h4>
+                                    <h3 className="h4">{pkg.name}</h3>
                                     <p>{pkg.tagline}</p>
                                     <div className="d-flex flex-row gspace-1 align-items-center">
-                                        <h3>{pkg.price}₾</h3>
+                                        <div className="h3">{pkg.price}₾</div>
                                         {pkg.oldPrice && <p className="price-was">{pkg.oldPrice}₾</p>}
                                     </div>
                                     <Link href="/contact/" className="btn btn-accent">
@@ -146,7 +146,7 @@ const PackageDetailSection = ({ slug }) => {
                                     </Link>
                                 </div>
                                 <div className="card service-recent">
-                                    <h4>სხვა პაკეტები</h4>
+                                    <h3 className="h4">სხვა პაკეტები</h3>
                                     <div className="underline-accent-short"></div>
                                     <ul className="single-service-list">
                                         {otherPackages.map((other) => (
@@ -163,7 +163,7 @@ const PackageDetailSection = ({ slug }) => {
                                 </div>
                                 <div className="cta-service-banner">
                                     <div className="spacer"></div>
-                                    <h3 className="title-heading">არ იცი რომელი აირჩიო?</h3>
+                                    <h2 className="h3 title-heading">არ იცი რომელი აირჩიო?</h2>
                                     <p>
                                         მოგვწერე და ერთად შევარჩევთ პაკეტს, რომელიც ზუსტად შენს ბიზნესს და ბიუჯეტს მოერგება.
                                     </p>

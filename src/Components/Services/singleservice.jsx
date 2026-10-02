@@ -26,9 +26,9 @@ const SingleServiceSection = () => {
                                             </div>
                                         </AnimateOnScroll>
                                         <AnimateOnScroll animation="fadeInRight" speed="normal">
-                                            <h3 className="title-heading">
+                                            <h2 className="h3 title-heading">
                                                 პროფესიონალური ვებსაიტი, რომელიც შენს ბიზნესს სჭირდება
-                                            </h3>
+                                            </h2>
                                         </AnimateOnScroll>
                                         <p>
                                             პირველი შთაბეჭდილება ონლაინ იწყება. ვქმნით ვებსაიტებს, რომლებიც შენს ბრენდს პროფესიონალურად წარმოაჩენს, მომხმარებელს შენამდე მისვლას გაუმარტივებს და ბიზნესს ზრდის შესაძლებლობას მისცემს.
@@ -43,7 +43,7 @@ const SingleServiceSection = () => {
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
                         <div className="col col-lg-8">
                             <div className="d-flex flex-column gspace-2">
-                                <h4>მიმოხილვა</h4>
+                                <h3 className="h4">მიმოხილვა</h3>
                                 <p>
                                     NOVATECH-ში ვქმნით ვებსაიტებს, რომლებიც ზუსტად შენი ბიზნესის საჭიროებებზეა მორგებული. დიზაინიდან გაშვებამდე ვზრუნავთ იმაზე, რომ საიტი იყოს სწრაფი, გამართული და ყველა მოწყობილობაზე მორგებული. სულ ერთია, ახალ ბრენდს იწყებ თუ არსებულს ავითარებ — ჩვენ ვქმნით ციფრულ გამოცდილებას, რომელიც ბიზნესს რეალურ შედეგს მოუტანს.
                                 </p>
@@ -67,7 +67,7 @@ const SingleServiceSection = () => {
                                 </div>
 
                                 <div className="card service-included">
-                                    <h4>რას მოიცავს</h4>
+                                    <h3 className="h4">რას მოიცავს</h3>
                                     <div className="underline-accent-short"></div>
                                     <p>
                                         ყოველი პროექტი მოიცავს სრულ ციკლს — იდეის განხილვიდან ვებსაიტის გაშვებამდე და შემდგომ მხარდაჭერამდე.
@@ -91,7 +91,7 @@ const SingleServiceSection = () => {
                                     </div>
                                 </div>
 
-                                <h4>რატომ NOVATECH?</h4>
+                                <h3 className="h4">რატომ NOVATECH?</h3>
                                 <p>
                                     ვქმნით ვებსაიტებს, რომლებიც არა მხოლოდ ლამაზად გამოიყურება, არამედ ბიზნესის მიზნებზეა მორგებული.
                                 </p>
@@ -102,14 +102,14 @@ const SingleServiceSection = () => {
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>შედეგზე ორიენტირებული</h5>
+                                                    <h4 className="h5">შედეგზე ორიენტირებული</h4>
                                                     <p>ვქმნით საიტს, რომელიც რეალურ შედეგს მოიტანს</p>
                                                 </div>
                                             </div>
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>გამოცდილი გუნდი</h5>
+                                                    <h4 className="h5">გამოცდილი გუნდი</h4>
                                                     <p>სპეციალისტები დიზაინსა და დეველოპმენტში</p>
                                                 </div>
                                             </div>
@@ -120,14 +120,14 @@ const SingleServiceSection = () => {
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>ინდივიდუალური მიდგომა</h5>
+                                                    <h4 className="h5">ინდივიდუალური მიდგომა</h4>
                                                     <p>ვქმნით ზუსტად შენს ბრენდზე მორგებულს</p>
                                                 </div>
                                             </div>
                                             <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1">
                                                 <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                 <div className="d-flex flex-column gspace-0">
-                                                    <h5>სისწრაფე და SEO</h5>
+                                                    <h4 className="h5">სისწრაფე და SEO</h4>
                                                     <p>სწრაფი საიტი, რომელსაც Google-იც აფასებს</p>
                                                 </div>
                                             </div>
@@ -139,7 +139,7 @@ const SingleServiceSection = () => {
                         <div className="col col-lg-4">
                             <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-between gspace-5">
                                 <div className="card service-recent">
-                                <h4>ჩვენი სერვისები</h4>
+                                <h3 className="h4">ჩვენი სერვისები</h3>
                                 <div className="underline-accent-short"></div>
                                 <ul className="single-service-list">
                                     {services.map((service) => (
@@ -153,7 +153,7 @@ const SingleServiceSection = () => {
                                 </div>
                                 <div className="cta-service-banner">
                                     <div className="spacer"></div>
-                                    <h3 className="title-heading">აიყვანე ბიზნესი ახალ საფეხურზე!</h3>
+                                    <h2 className="h3 title-heading">აიყვანე ბიზნესი ახალ საფეხურზე!</h2>
                                     <p>
                                         შენი იდეა. ჩვენი ტექნოლოგია. ერთად — ციფრული მომავალი. მოგვწერე და დაიწყე შენი ვებსაიტის შექმნა.
                                     </p>

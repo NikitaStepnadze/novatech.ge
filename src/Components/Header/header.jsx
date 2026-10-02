@@ -10,7 +10,7 @@ function Navbar() {
 const { isDropdownActive } = useNav();
 
 return (
-    <div className="navbar-wrapper">
+    <header className="navbar-wrapper">
         <nav className="navbar navbar-expand-lg">
             <div className="navbar-container">
                 <div className="logo-container">
@@ -221,12 +221,12 @@ return (
                         <div className="icon-circle">
                             <i className="fa-solid fa-phone-volume"></i>
                         </div>
-                        <h6><a href="tel:+995575753828" className="text-reset">575 75 38 28</a></h6>
+                        <div className="h6"><a href="tel:+995575753828" className="text-reset">575 75 38 28</a></div>
                     </div>
                 </div>
             </div>
         </nav>
-    </div>
+    </header>
 );
 }
 

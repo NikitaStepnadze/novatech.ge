@@ -28,7 +28,7 @@ const FaqSection = () => {
                         <div className="accordion" id="faqAccordion">
                             {faqData.map((item, index) => (
                                 <div className="accordion-item" key={item.id}>
-                                    <h2 className="accordion-header">
+                                    <h3 className="accordion-header h2">
                                     <button
                                         className={`accordion-button ${index !== 0 ? "collapsed" : ""}`}
                                         type="button"
@@ -39,7 +39,7 @@ const FaqSection = () => {
                                     >
                                         {item.question}
                                     </button>
-                                    </h2>
+                                    </h3>
                                     <div
                                     id={`faq${item.id}`}
                                     className={`accordion-collapse collapse ${index === 0 ? "show" : ""}`}

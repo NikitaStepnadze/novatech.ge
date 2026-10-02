@@ -19,7 +19,7 @@ const PartnershipSection = () => {
                         <div className="row row-cols-lg-2 row-cols-1 align-items-center px-5 position-relative z-2">
                             <div className="col">
                                 <div className="d-flex flex-column justify-content-start pe-lg-3 pe-0">
-                                    <h3 className="title-heading">ტექნოლოგიები, რომლებსაც ვიყენებთ</h3>
+                                    <h2 className="h3 title-heading">ტექნოლოგიები, რომლებსაც ვიყენებთ</h2>
                                 </div>
                             </div>
                             <div className="col">

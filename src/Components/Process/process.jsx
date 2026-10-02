@@ -38,9 +38,9 @@ const ProcessSection = () => {
                                             </div>
                                         </AnimateOnScroll>
                                         <AnimateOnScroll animation="fadeInRight" speed="normal">
-                                            <h3 className="title-heading">
+                                            <h2 className="h3 title-heading">
                                                 როგორ ვქმნით შენს ვებსაიტს
-                                            </h3>
+                                            </h2>
                                         </AnimateOnScroll>
                                         <p>
                                             პირველი ზარიდან საიტის გაშვებამდე — ყველა ნაბიჯი წინასწარ ცნობილია. ქვემოთ ნახავ, როგორ მიმდინარეობს შეკვეთა და რას მიიღებ პროექტის ბოლოს.
@@ -55,7 +55,7 @@ const ProcessSection = () => {
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-5">
                         <div className="col col-lg-8">
                             <div className="d-flex flex-column gspace-2">
-                                <h4>მიმოხილვა</h4>
+                                <h3 className="h4">მიმოხილვა</h3>
                                 <p>
                                     ვებსაიტის შეკვეთა მარტივია: დაგვიკავშირდები, ერთად განვსაზღვრავთ რა გჭირდება, შევთანხმდებით ფასსა და ვადებზე, დანარჩენს კი ჩვენ მივხედავთ. ყოველ ეტაპზე გიზიარებთ შედეგს და მხოლოდ შენი დასტურის შემდეგ გადავდივართ შემდეგზე.
                                 </p>
@@ -68,7 +68,7 @@ const ProcessSection = () => {
                                 ))}
 
                                 <div className="card service-included">
-                                    <h4>რას მიიღებ</h4>
+                                    <h3 className="h4">რას მიიღებ</h3>
                                     <div className="underline-accent-short"></div>
                                     <p>
                                         პროექტის ბოლოს მიიღებ სრულად გამართულ, ონლაინ გაშვებულ ვებსაიტს. ზუსტი ჩამონათვალი დამოკიდებულია არჩეულ პაკეტზე — დეტალები იხილე <a href="/pricing/">ფასების გვერდზე</a>.
@@ -86,7 +86,7 @@ const ProcessSection = () => {
                                     </div>
                                 </div>
 
-                                <h4>რატომ NOVATECH?</h4>
+                                <h3 className="h4">რატომ NOVATECH?</h3>
                                 <p>
                                     ვმუშაობთ ისე, რომ შეკვეთის პროცესი შენთვის იყოს მარტივი, გასაგები და პროგნოზირებადი.
                                 </p>
@@ -99,7 +99,7 @@ const ProcessSection = () => {
                                                     <div className="d-flex flex-column flex-md-row align-items-center text-center text-md-start gspace-1" key={item.title}>
                                                         <i className="fa-regular fa-2x fa-circle-check accent-color"></i>
                                                         <div className="d-flex flex-column gspace-0">
-                                                            <h5>{item.title}</h5>
+                                                            <h4 className="h5">{item.title}</h4>
                                                             <p>{item.content}</p>
                                                         </div>
                                                     </div>
@@ -113,7 +113,7 @@ const ProcessSection = () => {
                         <div className="col col-lg-4">
                             <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-between gspace-5">
                                 <div className="card service-recent">
-                                <h4>ჩვენი სერვისები</h4>
+                                <h3 className="h4">ჩვენი სერვისები</h3>
                                 <div className="underline-accent-short"></div>
                                 <ul className="single-service-list">
                                     {services.map((service) => (
@@ -127,7 +127,7 @@ const ProcessSection = () => {
                                 </div>
                                 <div className="cta-service-banner">
                                     <div className="spacer"></div>
-                                    <h3 className="title-heading">მზად ხარ დასაწყებად?</h3>
+                                    <h2 className="h3 title-heading">მზად ხარ დასაწყებად?</h2>
                                     <p>
                                         მოგვწერე ან დაგვირეკე — პირველი ნაბიჯი მხოლოდ ერთი ზარია.
                                     </p>

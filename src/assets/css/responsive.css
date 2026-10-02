@@ -3,22 +3,22 @@
 /* 01 Tablet (max-width: 991px) */
 
 @media screen and (max-width: 991px) {
-    h1{
+    h1, .h1 {
         font-size: var(--font-size-14xl);
     }
-    h2{
+    h2, .h2 {
         font-size: var(--font-size-13xl);
     }
-    h3 {
+    h3, .h3 {
         font-size: var(--font-size-8xl);
     }
-    h4 {
+    h4, .h4 {
         font-size: var(--font-size-3xl);
     }
-    h5{
+    h5, .h5 {
         font-size: var(--font-size-2xl);
     }
-    h6 {
+    h6, .h6 {
         font-size: var(--font-size-lg);
     }
     button, a{
@@ -276,22 +276,22 @@
 /* 02 Mobile (max-width:: 767px) */
 
 @media screen and (max-width: 767px){
-    h1{
+    h1, .h1 {
         font-size: var(--font-size-10xl);
     }
-    h2{
+    h2, .h2 {
         font-size: var(--font-size-9xl);
     }
-    h3{
+    h3, .h3 {
         font-size: var(--font-size-6xl);
     }
-    h4{
+    h4, .h4 {
         font-size: var(--font-size-2xl);
     }
-    h5 {
+    h5, .h5 {
         font-size: var(--font-size-xl);
     }
-    h6{
+    h6, .h6 {
         font-size: var(--font-size-base);
     }
     button, a{
@@ -832,7 +832,7 @@ html {
 
 /* Plain links wrapped around heading text (the contact phone / e-mail) would
    otherwise pick up the global `a` rule and drop to the small body font. */
-:is(h1, h2, h3, h4, h5, h6) > a.text-reset{
+:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) > a.text-reset{
     font: inherit;
 }
 
@@ -850,10 +850,10 @@ html {
 
     /* Same fluid-heading reasoning as the phone block below, for the tablet
        range where h2 was a fixed 56px. */
-    h2{
+    h2, .h2 {
         font-size: clamp(40px, 6.3vw, 56px);
     }
-    h3{
+    h3, .h3 {
         font-size: clamp(30px, 4.5vw, 38px);
     }
     .heading-container-short,
@@ -897,26 +897,27 @@ html {
        from the widest words in the copy: "გადაწყვეტილებები," is ~12.7em in
        ForBig and has to fit a 350px column at 390px. overflow-wrap is the last
        resort for a word that still does not fit. */
-    h1{
+    h1, .h1 {
         font-size: clamp(32px, 10.5vw, 45px);
     }
-    h2{
+    h2, .h2 {
         font-size: clamp(24px, 7vw, 40px);
     }
-    h3{
+    h3, .h3 {
         font-size: clamp(21px, 6.2vw, 30px);
     }
-    h4{
+    h4, .h4 {
         font-size: clamp(19px, 5.6vw, 22px);
     }
-    h5{
+    h5, .h5 {
         font-size: clamp(17px, 5vw, 20px);
     }
     /* Prices are short, so they keep their size instead of following h3. */
-    .card-pricing h3{
+    .card-pricing .h3{
         font-size: var(--font-size-6xl);
     }
-    h1, h2, h3, h4, h5, h6{
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
         overflow-wrap: break-word;
     }
     .title-heading,

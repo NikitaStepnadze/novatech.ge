@@ -27,7 +27,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="d-grid">
                                     <span>ტელეფონის ნომერი</span>
-                                    <h5><a href="tel:+995575753828" className="text-reset">575 75 38 28</a></h5>
+                                    <div className="h5"><a href="tel:+995575753828" className="text-reset">575 75 38 28</a></div>
                                 </div>
                             </div>
                             <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
@@ -40,7 +40,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="d-grid">
                                     <span>ელ. ფოსტა</span>
-                                    <h5><a href="mailto:info@novatech.ge" className="text-reset">info@novatech.ge</a></h5>
+                                    <div className="h5"><a href="mailto:info@novatech.ge" className="text-reset">info@novatech.ge</a></div>
                                 </div>
                             </div>
                             <div className="d-flex flex-column flex-md-row align-items-center text-md-start text-center gspace-2">
@@ -53,7 +53,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="d-grid">
                                     <span>მისამართი</span>
-                                    <h5>თბილისი, საქართველო</h5>
+                                    <div className="h5">თბილისი, საქართველო</div>
                                 </div>
                             </div>
                         </div>

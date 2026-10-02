@@ -12,9 +12,9 @@ export const EMAIL = "info@novatech.ge";
 
 // Same handles the portfolio page embeds (Data/SocialFeedsData).
 export const SOCIAL_PROFILES = [
-    { platform: "facebook", icon: "fa-facebook", url: "https://www.facebook.com/novatech.ge" },
-    { platform: "instagram", icon: "fa-instagram", url: "https://www.instagram.com/novatech.ge/" },
-    { platform: "tiktok", icon: "fa-tiktok", url: "https://www.tiktok.com/@novatech.ge" },
+    { platform: "facebook", icon: "fa-facebook", url: "https://www.facebook.com/NovaTechGeorgia" },
+    { platform: "instagram", icon: "fa-instagram", url: "https://www.instagram.com/nova_tech.ge/" },
+    { platform: "tiktok", icon: "fa-tiktok", url: "https://www.tiktok.com/@novatech.georgia" },
 ];
 
 export const LOGO_URL = `${SITE_URL}/assets/novatech/favicon/icon-512.png`;

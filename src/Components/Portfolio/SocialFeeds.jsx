@@ -99,7 +99,7 @@ function SocialFeedsSection() {
                                     </div>
                                     <figcaption className="works-item-meta">
                                         <span className="works-item-category">{item.title}</span>
-                                        <h5 className="works-item-title">
+                                        <div className="h5 works-item-title">
                                             <a
                                                 href={profileUrl}
                                                 target="_blank"
@@ -107,7 +107,7 @@ function SocialFeedsSection() {
                                             >
                                                 @{item.handle}
                                             </a>
-                                        </h5>
+                                        </div>
                                     </figcaption>
                                 </figure>
                             </AnimateOnScroll>

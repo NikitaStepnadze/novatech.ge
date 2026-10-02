@@ -3,7 +3,7 @@ import { EMAIL, PHONE_DISPLAY, PHONE_E164, SOCIAL_PROFILES } from "../../seo/sit
 
 const Footer = () => {
   return (
-    <div className="section-footer">
+    <footer className="section-footer">
         <div className="bg-footer-wrapper">
             <div className="bg-footer">
                 <div className="hero-container position-relative z-2">
@@ -14,7 +14,7 @@ const Footer = () => {
                                     <div className="logo-container-footer">
                                     <img src="/assets/images/marko-logo.png" alt="NOVATECH ლოგო" className="site-logo img-fluid" />
                                     </div>
-                                    <h4>ვქმნით ვებსაიტებს, რომლებიც ბიზნესს ავითარებს</h4>
+                                    <div className="h4">ვქმნით ვებსაიტებს, რომლებიც ბიზნესს ავითარებს</div>
                                     <p>
                                     შენი იდეა. ჩვენი ტექნოლოგია. ერთად — ციფრული მომავალი. ვქმნით ვებსაიტებს, რომლებიც შენს ბრენდს პროფესიონალურად წარმოაჩენს.
                                     </p>
@@ -23,7 +23,7 @@ const Footer = () => {
 
                             <div className="col col-lg-2">
                                 <div className="footer-quick-links">
-                                    <h5>სწრაფი ბმულები</h5>
+                                    <h2 className="h5">სწრაფი ბმულები</h2>
                                     <ul className="footer-list">
                                         <li><a href="/">მთავარი</a></li>
                                         <li><a href="/about/">ჩვენ შესახებ</a></li>
@@ -40,7 +40,7 @@ const Footer = () => {
 
                             <div className="col col-lg-3">
                                 <div className="footer-services-container">
-                                    <h5>სერვისები</h5>
+                                    <h2 className="h5">სერვისები</h2>
                                     <ul className="footer-list">
                                         <li><a href="/single_services/">ბიზნეს ვებსაიტი</a></li>
                                         <li><a href="/single_services/">ონლაინ მაღაზია</a></li>
@@ -54,14 +54,14 @@ const Footer = () => {
 
                             <div className="col col-lg-3">
                                 <div className="footer-contact-container">
-                                    <h5>საკონტაქტო ინფორმაცია</h5>
+                                    <h2 className="h5">საკონტაქტო ინფორმაცია</h2>
                                     <ul className="contact-list">
                                         <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
                                         <li><a href={`tel:${PHONE_E164}`}>{PHONE_DISPLAY}</a></li>
                                         <li>თბილისი, საქართველო</li>
                                     </ul>
                                     <div className="d-flex flex-column gspace-1">
-                                        <h5>სოციალური ქსელები</h5>
+                                        <h2 className="h5">სოციალური ქსელები</h2>
                                         <div className="social-container">
                                             {SOCIAL_PROFILES.map((profile) => (
                                                 <div className="social-item-wrapper" key={profile.platform}>
@@ -97,7 +97,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
   );
 };
 

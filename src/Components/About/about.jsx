@@ -29,7 +29,7 @@ function AboutSection(){
                                                     <span className="counter" data-target="21"></span>
                                                     <span className="counter-detail">+</span>
                                                 </div>
-                                                <h6>წარმატებით დასრულებული ციფრული პროექტი</h6>
+                                                <div className="h6">წარმატებით დასრულებული ციფრული პროექტი</div>
                                             </div>
                                         </AnimateOnScroll>
                                     </div>

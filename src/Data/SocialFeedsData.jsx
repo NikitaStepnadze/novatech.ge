@@ -7,20 +7,20 @@ export const socialFeedsData = [
         platform: "facebook",
         title: "Facebook",
         icon: "fa-facebook",
-        handle: "novatech.ge",
+        handle: "NovaTechGeorgia",
     },
     {
         id: 2,
         platform: "instagram",
         title: "Instagram",
         icon: "fa-instagram",
-        handle: "novatech.ge",
+        handle: "nova_tech.ge",
     },
     {
         id: 3,
         platform: "tiktok",
         title: "TikTok",
         icon: "fa-tiktok",
-        handle: "novatech.ge",
+        handle: "novatech.georgia",
     },
 ];

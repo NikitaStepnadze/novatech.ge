@@ -19,18 +19,6 @@ const TestimonialSection = () => {
                                 <div className="testimonial-header-wrapper">
                                     <div className="card card-testimonial-reviewer">
                                         <div className="d-flex flex-column flex-md-row flex-lg-column justify-content-between gspace-3">
-                                            <div className="testimonial-reviewer">
-                                                <div className="avatar-container">
-                                                    <img src="/assets/novatech/img/avatar-1.webp" alt="შემფასებელი" className="avatar" />
-                                                    <img src="/assets/novatech/img/avatar-2.webp" alt="შემფასებელი" className="avatar" />
-                                                    <img src="/assets/novatech/img/avatar-3.webp" alt="შემფასებელი" className="avatar" />
-                                                    <img src="/assets/novatech/img/avatar-4.webp" alt="შემფასებელი" className="avatar" />
-                                                </div>
-                                                <div className="detail">
-                                                    <h6>2.7k დადებითი</h6>
-                                                    <h6>შეფასება</h6>
-                                                </div>
-                                            </div>
                                             <div className="testimonial-rating-container">
                                                 <div className="d-flex flex-column justify-content-center align-items-center gspace-1">
                                                     <div className="d-flex flex-row align-items-center">

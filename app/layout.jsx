@@ -110,7 +110,7 @@ fbq('track', 'PageView');`}
                     <ModalVideoProvider>
                         <Navbar />
                         <Sidebar />
-                        {children}
+                        <main>{children}</main>
                         <Footer />
                     </ModalVideoProvider>
                 </NavProvider>

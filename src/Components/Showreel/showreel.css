@@ -142,7 +142,7 @@
     box-shadow: var(--box-shadow-bottom-right);
 }
 
-.showreel-point h5 {
+.showreel-point .h5 {
     color: var(--primary);
 }
 
